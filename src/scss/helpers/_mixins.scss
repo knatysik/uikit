@@ -1,0 +1,15 @@
+@mixin like($red) {
+  path {
+    fill: $red;
+  }
+}
+@mixin chat($blue) {
+  path {
+    fill: $blue;
+  }
+}
+@mixin share($green) {
+  path {
+    fill: $green;
+  }
+}

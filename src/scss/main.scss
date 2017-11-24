@@ -1,0 +1,25 @@
+@import "normalize";
+@import "helpers/variebles";
+@import "base/base";
+@import "base/typography";
+@import "layout/grid";
+@import "helpers/mixins";
+
+@import "component/input";
+@import "component/button";
+@import "component/icon";
+@import "component/group-field";
+@import "component/activations";
+@import "component/welcome";
+@import "component/comment";
+
+
+svg {
+  display: block;
+  width:20px;
+  height: 16px;
+}
+
+
+
+

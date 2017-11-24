@@ -1,0 +1,38 @@
+.c-comment {
+  display: flex;
+
+  .c-comment__picture {
+    min-width: 360px;
+    min-height: 264px;
+    background: url("../images/yellow-bg.png") no-repeat center center;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid #fff;
+    }
+  }
+  .c-comment__body {
+    background: $white;
+    padding: 30px 20px 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .c-comment__info {
+      display: flex;
+    }
+  }
+}
+
+.c-like {
+  @include like($danger);
+}

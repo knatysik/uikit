@@ -1,0 +1,30 @@
+.c-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: url("../../images/ui-welcome-bg.png") no-repeat left center;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    background: rgba(201, 215, 255, .45);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  &__title, &__text {
+    position: relative;
+  }
+
+  &__form {
+    position: relative;
+    display: block;
+    max-width: 550px;
+    width: 100%;
+  }
+}

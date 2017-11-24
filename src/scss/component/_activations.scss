@@ -1,0 +1,36 @@
+.c-activations {
+  display: flex;
+  flex-direction: row;
+
+  .c-activations__picture {
+    background: url("../images/coffee.png") no-repeat center center;
+    background-size: cover;
+    flex-grow: 4;
+    min-height: 264px;
+  }
+  .c-activations__social {
+    flex-grow: 1;
+    background: white;
+  }
+}
+.l-list {
+  .c-like {
+    @include like($danger);
+  }
+  .c-chat {
+    @include chat($default);
+  }
+  .c-share {
+    @include share($success);
+  }
+  .l-list__item--border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+//.l-list__item:before {
+//  content: '';
+//  display: block;
+//  padding-left: 100%;
+//}
+
