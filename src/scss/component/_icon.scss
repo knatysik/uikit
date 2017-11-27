@@ -1,6 +1,14 @@
-.c-icon--small {
+.c-icon {
+  svg {
+    width: 20px;
+    height: 16px;
+  }
 
-}
-.c-icon--large {
+  &--small {
 
+  }
+
+  &--large {
+
+  }
 }
