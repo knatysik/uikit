@@ -7,6 +7,31 @@
     flex-direction: column;
   }
 
+  &--profil {
+    border-top: 1px solid $border-color;
+    @include bp($sm) {
+      flex-direction: row;
+    }
+    .l-list__item {
+      border-right: none;
+      @include bp($sm) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--chart {
+    @include bp($sm) {
+      flex-direction: row;
+    }
+    .l-list__item {
+      border-right: none;
+      @include bp($sm) {
+        border-bottom: none;
+      }
+    }
+  }
+
   &__item {
     width: 100%;
     padding: 15px;

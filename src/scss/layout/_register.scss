@@ -1,0 +1,60 @@
+.l-register {
+  @extend %clean-list;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+
+  &__item {
+    padding: 5px;
+    flex-grow: 1;
+    align-self: center;
+  }
+
+  .c-user {
+
+    .c-user__photo {
+      padding: 0;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.l-mail{
+  @extend %clean-list;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    border-bottom: 1px solid $border-color;
+    padding: 15px;
+  }
+}
+
+.l-tags {
+  @extend %clean-list;
+  display: flex;
+
+  &__item {
+    border-bottom: 1px solid $border-color;
+    margin: 5px;
+
+    &--success {
+      @include circle(10px, 10px, $success)
+    }
+
+    &--curefully {
+      @include circle(10px, 10px, $curefully)
+    }
+
+    &--danger {
+      @include circle(10px, 10px, $danger)
+    }
+    &--info {
+      @include circle(10px, 10px, $info)
+    }
+  }
+}

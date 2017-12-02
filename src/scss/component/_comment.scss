@@ -39,6 +39,10 @@
     justify-content: center;
   }
 
+  &__title {
+    @include border-bottom(60px, 10px, 3px, $danger, $left: 0);
+  }
+
   &__info {
     display: flex;
     align-items: center;

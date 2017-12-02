@@ -1,0 +1,76 @@
+.c-book {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+
+  &__picture {
+    background: url("../images/book.png") no-repeat center center;
+    background-size: cover;
+  }
+  
+  &__body {
+    display: flex;
+    background: white;
+    padding: 20px;
+    flex-direction: column;
+    @include bp($sm) {
+      flex-direction: row;
+    }
+    @include bp($md) {
+      padding: $pad-md;
+    }
+  }
+
+  &__cover {
+    width: 75%;
+    padding: 20px;
+    @include bp($xs) {
+      width: 70%;
+    }
+    @include bp($md) {
+      padding: $pad-md;
+    }
+
+    p {
+      font-size: 14px;
+      display: inline;
+    }
+  }
+
+  &__genre {
+    border-bottom: 2px solid $border-color;
+    p {
+      color: $color-title;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    @include bp($xs) {
+      font-size: 40px;
+    }
+    @include bp($sm) {
+      font-size: 60px;
+    }
+  }
+
+  &__publish {
+    border-top: 2px solid $border-color;
+
+    p {
+      padding-right: 10px;
+      @include bp($xs) {
+        padding-right: 25px;
+      }
+
+      .c-book__author--name {
+        color: $help;
+      }
+    }
+  }
+
+  &__text {
+    line-height: 30px;
+  }
+}

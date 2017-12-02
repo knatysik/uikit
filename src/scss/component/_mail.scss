@@ -1,0 +1,30 @@
+.c-mail {
+  text-align: center;
+  margin-bottom: 15px;
+
+  &__login-settings {
+    background-color: $default;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $white;
+      padding-right: 5px;
+    }
+  }
+
+  &__user {
+    display: flex;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .c-button {
+    width: 80%;
+  }
+}

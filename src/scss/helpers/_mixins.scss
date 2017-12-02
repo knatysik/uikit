@@ -25,6 +25,13 @@
   height: $height;
 }
 
+@mixin circle($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  background-color: $color;
+}
+
 @mixin triangle($size, $color, $direction) {
   height: 0;
   width: 0;
@@ -46,4 +53,17 @@
   }
 }
 
+@mixin border-bottom($width, $height, $depth, $color, $left:50%) {
+  position: relative;
 
+  &:after {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    border-bottom: $depth solid $color;
+    position: absolute;
+    top: 100%;
+    left: $left;
+  }
+}

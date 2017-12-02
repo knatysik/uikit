@@ -1,0 +1,33 @@
+.c-article {
+  display: flex;
+  flex-direction: column;
+  @include bp($sm) {
+    flex-direction: row;
+  }
+
+  &__picture {
+    background: url("../images/article.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 300px;
+  }
+
+  &__body {
+    background: $white;
+    padding: 30px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    @include border-bottom(60px, 10px, 3px, $color-title);
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  .c-button {
+    text-transform: uppercase;
+  }
+}

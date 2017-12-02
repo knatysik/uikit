@@ -1,0 +1,21 @@
+.l-subgrid {
+  @extend %clean-list;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 50px 100px 100px;
+
+  &__item {
+    grid-column: 1/7;
+    &:first-child {
+      border-bottom: 1px solid $border-color;
+    }
+    &:last-child {
+      border-top: 1px solid $border-color;
+      padding: 0 40px 40px;
+    }
+  }
+
+  .c-icon {
+    cursor: hand;
+  }
+}

@@ -1,0 +1,38 @@
+.c-separator {
+  display: flex;
+  align-items: center;
+  @include bp($sm) {
+    flex-direction: column;
+  }
+
+  &__number-part {
+    color: $color-number;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  &__line {
+    width: 50%;
+    @include bp($sm) {
+      width: 1px;
+      height: 100%;
+      margin-top: -20%;
+      margin-bottom: 40%;
+    }
+    @include bp($sm) {
+      display: none;
+    }
+  }
+
+  &__name-part {
+    font-weight: 100;
+    color: $color-title;
+    @include bp($sm) {
+      transform: rotate(-90deg);
+      padding-left: 40%;
+    }
+    @include bp($sm) {
+      padding-left: 10%;
+    }
+  }
+}

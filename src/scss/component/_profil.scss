@@ -1,0 +1,24 @@
+.c-profil {
+  background: $white;
+  text-align: center;
+
+  &__picture {
+    background: url("../images/profil-bg.png") no-repeat center center;
+    background-size: cover;
+    min-height: 120px;
+  }
+
+  .c-stats {
+    &__qt {
+      text-transform: uppercase;
+    }
+  }
+  .c-user {
+    margin-top: -70px;
+  }
+
+  .c-button {
+    min-width: 80%;
+    margin: 20px;
+  }
+}

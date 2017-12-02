@@ -1,0 +1,36 @@
+.c-catalog {
+  position: relative;
+
+  &__picture {
+    background: url("../images/catalog.png") no-repeat center center;
+    background-size: cover;
+    min-height: 250px;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    color: $success;
+  }
+
+  .c-customers {
+    display: flex;
+
+    p {
+      padding: 3px;
+    }
+
+    &__all {
+      border: 1px solid $border-color;
+      border-radius: 20px;
+    }
+  }
+}

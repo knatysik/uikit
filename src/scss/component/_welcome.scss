@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background: url("../../images/ui-welcome-bg.png") no-repeat left center;
+  background: url("../../images/welcome-bg.png") no-repeat left center;
   background-size: cover;
   position: relative;
   padding: 15px;
@@ -21,6 +21,7 @@
 
   &__title, &__text {
     position: relative;
+    color: $color-title;
   }
 
   &__form {

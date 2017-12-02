@@ -1,0 +1,17 @@
+.c-page {
+  text-align: center;
+  position: relative;
+
+  &__picture {
+    background: url("../images/page.png") no-repeat center center;
+    background-size: cover;
+    min-height: 250px;
+  }
+
+  &__body {
+  padding: 20px;
+}
+  .c-button {
+    width: 80%;
+  }
+}

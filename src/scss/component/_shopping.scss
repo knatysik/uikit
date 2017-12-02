@@ -1,0 +1,13 @@
+.c-shopping {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include bp($xs) {
+    flex-direction: row;
+  }
+
+  .c-button {
+    margin: 10px;
+  }
+}

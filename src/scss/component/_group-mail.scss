@@ -1,0 +1,28 @@
+.c-group-mail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .c-post-office {
+    display: flex;
+    padding: 5px;
+
+    .c-icon {
+      padding-right: 10px;
+    }
+  }
+
+  .c-mail-title {
+    color: $color-text;
+  }
+
+  .c-block-bg {
+    padding: 5px;
+
+    &--active {
+      background: $default;
+      color: $white;
+      border-radius: 5px;
+    }
+  }
+}

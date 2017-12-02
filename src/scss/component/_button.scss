@@ -1,13 +1,25 @@
 .c-button {
   padding: 10px 15px;
+  color: $white;
+  text-transform: uppercase;
 
+  &--default {
+    background-color: $default;
+  }
   &--info {
     background-color: $info;
   }
+
+  &--success {
+    background-color: $success;
+  }
+
+  &--outline {
+    border: 1px solid $border-color;
+    color: $color-title;
+  }
+
+  &--action {
+    background-color: $action;
+  }
 }
-//Info
-//Default
-//Success
-//Action
-//Outline
-//Block

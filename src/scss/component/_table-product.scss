@@ -1,0 +1,18 @@
+.c-table-product {
+  @extend %clean-list;
+  grid-area: table-product;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item {
+    width: 100%;
+    padding: 15px;
+    flex-grow: 1;
+    text-align: center;
+
+    &--price, &--total {
+      color: $color-text;
+    }
+  }
+}

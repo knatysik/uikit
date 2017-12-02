@@ -1,0 +1,13 @@
+.c-chart {
+
+  &__picture {
+    background: $info url("../images/chart.png") no-repeat center center;
+    background-size: contain;
+    min-height: 300px;
+  }
+
+  &__body {
+    background: $white;
+    padding: 10px;
+  }
+}

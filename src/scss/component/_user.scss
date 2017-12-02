@@ -1,13 +1,22 @@
 .c-user {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  &--no-desc {
+    flex-direction: row;
+  }
 
   &__photo {
+    padding: 10px;
 
+    img {
+      border-radius: 50%;
+      border: 1px solid $white;
+    }
   }
 
   &__name {
-
+    color: $color-title;
+    font-size: 18px;
   }
 }
