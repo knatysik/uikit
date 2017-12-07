@@ -3,6 +3,19 @@
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 22px 22px;
 
+  @include bp($xs) {
+    padding: 0 30px;
+  }
+  @include bp($sm) {
+    padding: 0 30px;
+  }
+  @include bp($md) {
+    padding: 0 30px;
+  }
+  @include bp($lg) {
+    padding: 0 40px;
+  }
+
   &__item {
     box-shadow: 0px 0px 4px #d6dbe1;
     background-color: $white;
@@ -10,6 +23,13 @@
     &--col-6 {
       grid-column: 1/7;
       grid-row: 1/2;
+
+      @include bp($xs) {
+        height: 300px;
+      }
+      @include bp($lg) {
+        height: 500px;
+      }
 
       //&:last-of-type {
       //  grid-row: 4/5;
