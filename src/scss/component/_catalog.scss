@@ -19,18 +19,36 @@
 
   &__price {
     color: $success;
+    font-size: 20px;
+    margin: 0;
   }
 
   .c-customers {
     display: flex;
+    align-items: flex-start;
+    padding-bottom: 15px;
 
-    p {
-      padding: 3px;
+    @include bp($md) {
+      padding-bottom: 0px;
     }
 
     &__all {
       border: 1px solid $border-color;
       border-radius: 20px;
+      padding: 5px 12px;
+      margin: 5px;
+    }
+
+    &__buy {
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+  .c-button {
+    width: 85%;
+
+    @include bp($md) {
+      width: auto;
     }
   }
 }

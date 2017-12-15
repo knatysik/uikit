@@ -1,21 +1,43 @@
 .c-table-total {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include bp($sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .c-discount {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+
+    @include bp($sm) {
+      flex-direction: row;
+      padding-top: 0;
+    }
+
 
     .c-input {
       border: 1px solid $border-color;
       margin-left: 10px;
+      width: 50%;
+
+      @include bp($sm) {
+        width: auto;
+      }
     }
   }
 
   .c-delivery-total {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+
+    @include bp($sm) {
+
+    }
+    //align-items: flex-end;
 
     .c-total-price {
       color: $color-title;

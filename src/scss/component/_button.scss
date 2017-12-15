@@ -1,5 +1,5 @@
 .c-button {
-  padding: 10px 15px;
+  padding: 15px;
   color: $white;
   text-transform: uppercase;
 
@@ -11,15 +11,17 @@
   }
 
   &--success {
-    background-color: $success;
+    background-color: $success-btn;
   }
 
   &--outline {
     border: 1px solid $border-color;
     color: $color-title;
+    padding: 15px 35px;
   }
 
   &--action {
     background-color: $action;
+    padding: 15px 35px;
   }
 }

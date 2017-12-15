@@ -1,23 +1,42 @@
 .c-cover {
   display: flex;
   font-family: sans-serif;
-  height: 100%;
+  height: 360px;
 
   &__picture {
     flex-grow: 1;
-    background: url("../images/summer.png") no-repeat left center;
+    background: url("../images/summer.png") no-repeat center center;
     background-size: cover;
-    width: 100%;
+    width: 30%;
   }
 
   &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-grow: 1;
     background: $white;
     padding: 30px;
+
+    .c-cover-name__title {
+      font-family: Serif;
+      font-style: italic;
+      font-size: 45px;
+      margin-top: 10px;
+      text-transform: capitalize;
+    }
   }
 }
 .c-cover--jacket {
   flex-direction: row-reverse;
+
+  .c-cover-name {
+    padding-bottom: 10px;
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
 }
 .c-cover--jacket .c-cover__picture {
   background: $white url("../images/jacket.png") no-repeat right bottom;

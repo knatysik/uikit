@@ -4,7 +4,7 @@
 
   &__login-settings {
     background-color: $default;
-    padding: 15px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
 
@@ -21,10 +21,10 @@
   &__tags {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px 20px;
   }
 
   .c-button {
-    width: 80%;
+    width: 90%;
   }
 }

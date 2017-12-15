@@ -1,7 +1,7 @@
 .c-comment {
   display: flex;
   flex-direction: column;
-  @include bp($xs) {
+  @include bp($md) {
     flex-direction: row-reverse;
   }
 
@@ -11,8 +11,8 @@
     background: url("../images/yellow-bg.png") no-repeat center right;
     background-size: cover;
     position: relative;
-    @include bp($xs) {
-      min-width: 120px;
+    @include bp($md) {
+      min-width: 360px;
     }
 
     &:before {
@@ -22,7 +22,7 @@
       top: 0;
       right: 50%;
       @include triangle(10px, white, down);
-      @include bp($xs) {
+      @include bp($md) {
         right: 0;
         top: 50%;
         border-right-color: white;
@@ -40,7 +40,7 @@
   }
 
   &__title {
-    @include border-bottom(60px, 10px, 3px, $danger, $left: 0);
+    @include border-bottom(40px, 16px, 2px, $danger, $left: 0);
   }
 
   &__info {

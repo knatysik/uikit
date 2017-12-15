@@ -3,12 +3,18 @@
   align-items: center;
   @include bp($sm) {
     flex-direction: column;
+    padding: 0 50px;
   }
 
   &__number-part {
     color: $color-number;
-    font-size: 80px;
+    font-size: 90px;
     text-align: center;
+    line-height: inherit;
+    margin: 5px;
+    font-family: PTSans-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
   }
 
   &__line {
@@ -25,7 +31,7 @@
   }
 
   &__name-part {
-    font-weight: 100;
+    font-weight: 500;
     color: $color-title;
     @include bp($sm) {
       transform: rotate(-90deg);

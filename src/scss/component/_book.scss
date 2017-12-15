@@ -6,61 +6,89 @@
   &__picture {
     background: url("../images/book.png") no-repeat center center;
     background-size: cover;
+    height: 280px;
+
+    @include bp($xs) {
+      height: 300px;
+    }
+
+    @include bp($sm) {
+      background-size: cover;
+      height: 600px;
+    }
   }
   
   &__body {
     display: flex;
     background: white;
-    padding: 20px;
+    padding: 30px;
     flex-direction: column;
     @include bp($sm) {
       flex-direction: row;
     }
     @include bp($md) {
-      padding: $pad-md;
+      padding: $pad-md $pad-md $pad-md 10px;
     }
   }
 
   &__cover {
-    width: 75%;
     padding: 20px;
     @include bp($xs) {
       width: 70%;
+      padding: 20px;
+    }
+    @include bp($sm) {
+      width: 65%;
+      padding: 50px;
     }
     @include bp($md) {
-      padding: $pad-md;
+      padding: 88px;
     }
 
     p {
-      font-size: 14px;
       display: inline;
     }
   }
 
   &__genre {
-    border-bottom: 2px solid $border-color;
+    border-bottom: 1px solid $border-color;
     p {
       color: $color-title;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
     }
   }
 
   &__title {
     font-size: 30px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 55px 0;
+    margin: 2px 0;
+
     @include bp($xs) {
-      font-size: 40px;
+      font-size: 38px;
+      padding: 60px 0;
     }
     @include bp($sm) {
       font-size: 60px;
+      padding: 150px 0;
     }
   }
 
   &__publish {
-    border-top: 2px solid $border-color;
+    border-top: 1px solid $border-color;
 
     p {
       padding-right: 10px;
+
       @include bp($xs) {
+        padding-right: 5px;
+        word-spacing: -3px;
+      }
+
+      @include bp($sm) {
         padding-right: 25px;
       }
 
@@ -71,6 +99,6 @@
   }
 
   &__text {
-    line-height: 30px;
+    line-height: 34px;
   }
 }

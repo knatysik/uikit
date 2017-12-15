@@ -43,18 +43,18 @@
     margin: 5px;
 
     &--success {
-      @include circle(10px, 10px, $success)
+      @include circle(12px, 12px, $success)
     }
 
     &--curefully {
-      @include circle(10px, 10px, $curefully)
+      @include circle(12px, 12px, $curefully)
     }
 
     &--danger {
-      @include circle(10px, 10px, $danger)
+      @include circle(12px, 12px, $danger)
     }
     &--info {
-      @include circle(10px, 10px, $info)
+      @include circle(12px, 12px, $info)
     }
   }
 }

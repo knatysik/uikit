@@ -8,6 +8,21 @@
 
   &__body {
     background: $white;
-    padding: 10px;
+    padding: 30px;
+
+    .l-list-chart {
+      @extend %clean-list;
+      display: flex;
+      justify-content: space-between;
+
+      @include bp($sm) {
+      }
+
+      &__item {
+
+        @include bp($sm) {
+        }
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
   @extend %clean-list;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 50px 100px 100px;
+  //grid-template-rows: 50px 100px 100px;
 
   &__item {
     grid-column: 1/7;
@@ -12,6 +12,20 @@
     &:last-child {
       border-top: 1px solid $border-color;
       padding: 0 40px 40px;
+    }
+
+    &--product {
+      border-bottom: 1px dotted $border-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @include bp($sm) {
+      &--product {
+        border-bottom: none;
+      }
     }
   }
 

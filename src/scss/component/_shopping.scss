@@ -2,12 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
-  @include bp($xs) {
+  @include bp($md) {
     flex-direction: row;
-  }
-
-  .c-button {
-    margin: 10px;
   }
 }

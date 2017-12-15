@@ -20,5 +20,11 @@ body {
 p {
   color: $color-text;
   text-align: justify;
-  line-height: 20px;
+  line-height: 23px;
+  letter-spacing: 0.8px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 0;
 }

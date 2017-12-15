@@ -2,17 +2,45 @@
   @extend %clean-list;
   grid-area: table-product;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
   &__item {
-    width: 100%;
     padding: 15px;
     flex-grow: 1;
     text-align: center;
 
+    &:first-child {
+      width: 20%;
+    }
+
+    &:nth-child(2) {
+      width: 70%;
+    }
+
+    &:last-child {
+      max-width: 50px;
+      border-bottom: none;
+    }
+
     &--price, &--total {
       color: $color-text;
+    }
+  }
+
+
+
+  @include bp($sm) {
+    flex-wrap: nowrap;
+
+    &__item {
+      width: 100%;
+
+      &:first-child {
+        max-width: 100px;
+        min-width: 100px;
+      }
     }
   }
 }

@@ -10,6 +10,18 @@
     background-size: cover;
     width: 100%;
     min-height: 300px;
+
+    @include bp($xs) {
+      min-height: 400px;
+    }
+
+    @include bp($sm) {
+      min-width: 50%;
+    }
+
+    @include bp($md) {
+      min-height: 600px;
+    }
   }
 
   &__body {
@@ -20,11 +32,18 @@
 
   &__title {
     font-size: 48px;
-    @include border-bottom(60px, 10px, 3px, $color-title);
+    font-weight: 600;
+    margin-top: 0;
+    @include border-bottom(60px, 26px, 3px, $color-title, $left: 40%);
   }
 
   &__text {
     text-align: center;
+    line-height: 46px;
+    font-size: 16px;
+    padding-top: 10px;
+    max-height: 360px;
+    overflow: hidden;
   }
 
   .c-button {

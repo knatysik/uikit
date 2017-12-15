@@ -1,9 +1,16 @@
 .c-particle {
   display: flex;
   width: 30%;
-  margin: auto;
+  margin: 30px auto 0;
 
   hr {
-    width: 10%;
+    width: 25%;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: PTSans-serif;
   }
 }

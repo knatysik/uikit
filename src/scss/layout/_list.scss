@@ -7,20 +7,9 @@
     flex-direction: column;
   }
 
-  &--profil {
+  &--profile {
+    margin-top: 18px;
     border-top: 1px solid $border-color;
-    @include bp($sm) {
-      flex-direction: row;
-    }
-    .l-list__item {
-      border-right: none;
-      @include bp($sm) {
-        border-bottom: none;
-      }
-    }
-  }
-
-  &--chart {
     @include bp($sm) {
       flex-direction: row;
     }
@@ -36,9 +25,9 @@
     width: 100%;
     padding: 15px;
     flex-grow: 1;
-    align-self: center;
     display: flex;
     flex-direction: column;
+    align-self: center;
     align-items: center;
     justify-content: center;
     border-right: 1px solid $border-color;
