@@ -55,5 +55,5 @@ gulp.task('server', function () {
 gulp.task('images', function () {
   gulp.src('./src/images/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./build/images'))
+    .pipe(gulp.dest('./build/images/'))
 });

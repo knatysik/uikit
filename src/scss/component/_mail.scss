@@ -1,6 +1,11 @@
 .c-mail {
   text-align: center;
   margin-bottom: 15px;
+  font-size: 14px;
+
+  &__wrap {
+    padding: 15px 30px;
+  }
 
   &__login-settings {
     background-color: $default;
@@ -12,19 +17,45 @@
       color: $white;
       padding-right: 5px;
     }
+
+    .c-icon:hover {
+      cursor: pointer;
+
+      .settings path{
+        animation-name: rotateSettings;
+        animation-duration: .5s;
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes rotateSettings {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 
   &__user {
     display: flex;
+    align-items: center;
+
+    .c-icon {
+      height: 12px;
+    }
   }
 
   &__tags {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    font-size: 12px;
+    margin-bottom: 30px;
   }
 
   .c-button {
-    width: 90%;
+    width: 100%;
   }
 }

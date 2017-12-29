@@ -9,13 +9,16 @@
 
   .c-discount {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
     padding-top: 15px;
+    margin-bottom: 20px;
 
     @include bp($sm) {
+      align-items: center;
       flex-direction: row;
       padding-top: 0;
+      margin-bottom: 0;
     }
 
 
@@ -34,15 +37,20 @@
     display: flex;
     flex-direction: column;
 
-    @include bp($sm) {
-
+    &__delivery {
+      text-align: right;
+      margin-bottom: 0;
     }
-    //align-items: flex-end;
 
     .c-total-price {
       color: $color-title;
       font-size: 18px;
       text-transform: uppercase;
+      text-align: right;
+    }
+
+    .c-button {
+      margin: 0 0 0 auto;
     }
   }
 }

@@ -1,11 +1,13 @@
 .c-button {
   padding: 15px;
+  border-radius: 5px;
   color: $white;
   text-transform: uppercase;
 
   &--default {
     background-color: $default;
   }
+
   &--info {
     background-color: $info;
   }
@@ -15,13 +17,24 @@
   }
 
   &--outline {
-    border: 1px solid $border-color;
+    background-color: $white;
+    border: 1px solid $border-btn;
     color: $color-title;
     padding: 15px 35px;
+
+    &:hover {
+      background-color: $border-btn;
+      color: $white;
+    }
   }
 
   &--action {
     background-color: $action;
     padding: 15px 35px;
+  }
+
+  &:hover {
+    opacity: .8;
+    transition: all 0.5s ease-in-out 0s;
   }
 }

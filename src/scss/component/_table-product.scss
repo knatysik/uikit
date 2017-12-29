@@ -4,7 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+
+  &--none {
+    display: none;
+  }
 
   &__item {
     padding: 15px;
@@ -12,24 +15,45 @@
     text-align: center;
 
     &:first-child {
-      width: 20%;
+      width: 15%;
     }
 
     &:nth-child(2) {
       width: 70%;
+
+      a {
+        color: $color-title;
+      }
     }
 
     &:last-child {
-      max-width: 50px;
       border-bottom: none;
+      cursor: pointer;
+
+      .c-close svg:hover polygon {
+        fill: $danger;
+        stroke: $danger;
+        stroke-width: 80px;
+        animation-name: rotateClose;
+        animation-duration: .3s;
+        transform-origin: 50% 50%;
+      }
+
+      @keyframes rotateClose {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(90deg);
+        }
+      }
     }
 
     &--price, &--total {
       color: $color-text;
     }
   }
-
-
 
   @include bp($sm) {
     flex-wrap: nowrap;
@@ -39,7 +63,16 @@
 
       &:first-child {
         max-width: 100px;
-        min-width: 100px;
+        min-width: 80px;
+        width: 100%;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+      }
+
+      &:last-child {
+        width: 50px;
       }
     }
   }

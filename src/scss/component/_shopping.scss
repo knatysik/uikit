@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 0 30px 30px;
 
-  @include bp($md) {
+  @include bp($sm) {
     flex-direction: row;
+    align-items: flex-start;
   }
 }

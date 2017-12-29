@@ -1,0 +1,120 @@
+.c-media-controls {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  input, #currentTime, #duration {
+    margin: 0 10px;
+  }
+
+  div {
+    color: $color-text;
+  }
+
+  #duration {
+    display: none;
+
+    @include bp($sm) {
+      display: block;
+    }
+  }
+
+  #playpause {
+    background: url("../images/video-play.svg") no-repeat center center;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 10px;
+
+    @include bp($sm) {
+      margin: 0 10px;
+    }
+
+    @include tooltip(auto, 0);
+
+    &.play {
+      background: url("../images/video-pause.svg") no-repeat center center;
+    }
+  }
+
+  &__fullScreen {
+    background: url("../images/video-fullScreen.svg") no-repeat center center;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    margin-left: 10px;
+
+    @include bp($sm) {
+      margin: 0 10px;
+    }
+
+    @include tooltip(0);
+  }
+
+  &__volume {
+    display: none;
+    background: url("../images/video-volume.svg") no-repeat center center;
+    width: 20px;
+    height: 16px;
+    background-size: contain;
+    margin: 0 10px;
+
+    @include tooltip(20%);
+
+    @include bp($sm) {
+      display: block;
+    }
+  }
+
+  .timer {
+    display: none;
+    background-color: #dde1e7;
+    width: 50%;
+    height: 2px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+
+    @include bp($sm) {
+      display: block;
+    }
+
+    &#volumeWrapper {
+      width: 15%;
+    }
+
+    &__bar {
+      position: absolute;
+      background-color: $action;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 2px;
+      z-index: 2;
+
+      &#volumeBar {
+        width: 100%;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+    }
+
+    &:hover {
+      height: 5px;
+      transition-duration: .3s;
+
+      .timer__bar {
+        height: 5px;
+        transition-duration: .3s;
+      }
+    }
+  }
+}

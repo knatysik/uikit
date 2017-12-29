@@ -1,33 +1,48 @@
 .c-profile {
   background: $white;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 
   &__picture {
     background: url("../images/profile-bg.png") no-repeat center center;
     background-size: cover;
-    min-height: 120px;
+    min-height: 150px;
   }
 
-  .c-stats {
-
-    &__qt {
-      text-transform: uppercase;
-      padding-top: 20px;
-      margin: 5px;
-      text-align: center;
-    }
-
-    &__desc {
-      margin-top: 0;
-      text-align: center;
-    }
-  }
   .c-user {
     margin-top: -70px;
+    padding-bottom: 30px;
   }
 
-  .c-button {
-    min-width: 85%;
-    margin: 5px 5px 20px;
+  &__stats {
+    padding: 30px;
+    border-top: 1px solid $border-color;
+
+    .l-profile {
+      @extend %clean-list;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .c-stats {
+
+        &__qt {
+          text-transform: uppercase;
+          margin: 5px;
+          text-align: center;
+        }
+
+        &__desc {
+          margin-top: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .c-button {
+      width: 100%;
+    }
   }
 }

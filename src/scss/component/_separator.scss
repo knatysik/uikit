@@ -1,44 +1,60 @@
 .c-separator {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+
   @include bp($sm) {
     flex-direction: column;
     padding: 0 50px;
+    min-height: 290px;
   }
 
   &__number-part {
     color: $color-number;
-    font-size: 90px;
-    text-align: center;
-    line-height: inherit;
-    margin: 5px;
+    font-size: 70px;
     font-family: PTSans-serif;
     font-weight: 600;
     letter-spacing: 5px;
+
+    @include bp($xs) {
+      font-size: 100px;
+    }
   }
 
   &__line {
     width: 50%;
+    margin: 0;
+    display: none;
+
+    @include bp($xs) {
+      display: block;
+    }
+
     @include bp($sm) {
       width: 1px;
       height: 100%;
-      margin-top: -20%;
-      margin-bottom: 40%;
-    }
-    @include bp($sm) {
-      display: none;
     }
   }
 
   &__name-part {
     font-weight: 500;
+    text-transform: uppercase;
     color: $color-title;
-    @include bp($sm) {
-      transform: rotate(-90deg);
-      padding-left: 40%;
+    font-size: 14px;
+    padding: 20px 0 20px 20px;
+
+    @include bp($xs) {
+      font-size: 18px;
     }
+
     @include bp($sm) {
-      padding-left: 10%;
+      padding: 20px;
+      transform: rotate(-90deg) translateY(50%);
+      background-color: #fff;
+      transform-origin: left bottom;
+      left: 50%;
+      position: relative;
     }
   }
 }

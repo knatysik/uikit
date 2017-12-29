@@ -15,10 +15,12 @@
 
       &:first-child {
         max-width: 100px;
+        min-width: 80px;
+        width: auto;
       }
 
       &:last-child {
-        max-width: 50px;
+        width: 50px;
       }
     }
   }

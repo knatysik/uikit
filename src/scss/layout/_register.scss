@@ -1,8 +1,11 @@
 .l-register {
   @extend %clean-list;
   display: flex;
-  height: 100%;
-  flex-direction: row;
+  flex-direction: column;
+
+  @include bp($xs) {
+    flex-direction: row;
+  }
 
   &__item {
     padding: 5px;
@@ -18,6 +21,7 @@
       img {
         width: 32px;
         height: 32px;
+        border: 1px solid $border-color;
       }
     }
   }
@@ -30,7 +34,7 @@
 
   &__item {
     border-bottom: 1px solid $border-color;
-    padding: 15px;
+    padding: 25px 30px;
   }
 }
 
@@ -39,22 +43,28 @@
   display: flex;
 
   &__item {
-    border-bottom: 1px solid $border-color;
     margin: 5px;
+    cursor: pointer;
 
     &--success {
-      @include circle(12px, 12px, $success)
+      @include circle($success)
     }
 
     &--curefully {
-      @include circle(12px, 12px, $curefully)
+      @include circle($curefully)
     }
 
     &--danger {
-      @include circle(12px, 12px, $danger)
+      @include circle($danger)
     }
+
     &--info {
-      @include circle(12px, 12px, $info)
+      @include circle($info)
+    }
+
+    &:hover {
+      opacity: .9;
+      box-shadow: inset 0 0 0 2px $border-color;
     }
   }
 }

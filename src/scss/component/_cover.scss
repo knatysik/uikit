@@ -5,9 +5,19 @@
 
   &__picture {
     flex-grow: 1;
-    background: url("../images/summer.png") no-repeat center center;
+    background: url("../images/summer.png") no-repeat;
+    background-position: center;
     background-size: cover;
     width: 30%;
+
+    @include bp($md) {
+      background-position: left;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    color: $border-btn;
   }
 
   &__body {
@@ -18,17 +28,25 @@
     background: $white;
     padding: 30px;
 
+    @include bp($md) {
+      padding: 50px;
+    }
+
     .c-cover-name__title {
       font-family: Serif;
       font-style: italic;
       font-size: 45px;
-      margin-top: 10px;
+      margin-top: 0px;
       text-transform: capitalize;
     }
   }
 }
 .c-cover--jacket {
   flex-direction: row-reverse;
+
+  .c-cover__body {
+    justify-content: flex-start;
+  }
 
   .c-cover-name {
     padding-bottom: 10px;

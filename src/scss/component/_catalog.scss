@@ -1,5 +1,9 @@
 .c-catalog {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 
   &__picture {
     background: url("../images/catalog.png") no-repeat center center;
@@ -8,7 +12,11 @@
   }
 
   &__body {
-    padding: 20px;
+    padding: 30px;
+  }
+
+  &__text {
+    margin-bottom: 0;
   }
 
   &__info {
@@ -32,6 +40,19 @@
       padding-bottom: 0px;
     }
 
+    &__catalog {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      padding-left: 15px;
+
+      @include bp($xs) {
+        flex-direction: row;
+        padding-left: 0;
+      }
+    }
+
     &__all {
       border: 1px solid $border-color;
       border-radius: 20px;
@@ -40,15 +61,22 @@
     }
 
     &__buy {
-      padding: 5px;
-      margin: 5px;
+      padding: 0;
+      margin: 0;
+
+      @include bp($xs) {
+        margin-left: 10px;
+      }
     }
   }
-  .c-button {
-    width: 85%;
 
-    @include bp($md) {
+  .c-button {
+    width: 100%;
+    width: -moz-available;
+
+    @include bp($sm) {
       width: auto;
+      //width: -moz-max-content;
     }
   }
 }

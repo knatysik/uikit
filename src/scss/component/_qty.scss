@@ -1,5 +1,14 @@
 .c-qty {
   border: 1px solid $border-color;
-  padding: 10px;
   margin: 0 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out 0s;
+
+  &:hover {
+    background-color: $border-color;
+  }
 }

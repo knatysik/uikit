@@ -2,7 +2,6 @@
   display: grid;
   grid-gap: 22px 22px;
   grid-template-columns: repeat(6, 1fr);
-  //grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
   "welcome welcome welcome welcome welcome welcome"
   "activations activations activations activations activations activations"
@@ -13,7 +12,6 @@
   "article article article article article article"
   "chart chart chart chart chart chart"
   "mail mail mail mail mail mail"
-  "music-player music-player music-player music-player music-player music-player"
   "cover-summer cover-summer cover-summer cover-summer cover-summer cover-summer"
   "cover-jacket cover-jacket cover-jacket cover-jacket cover-jacket cover-jacket"
   "page page page page page page"
@@ -32,7 +30,6 @@
       "book book book book book book"
       "article article article article article article"
       "chart chart chart chart mail mail"
-      "music-player music-player music-player music-player music-player music-player"
       "cover-summer cover-summer cover-summer cover-jacket cover-jacket cover-jacket"
       "page page catalog catalog catalog catalog"
       "checkout checkout checkout checkout checkout checkout";
@@ -41,82 +38,6 @@
   &__item {
     box-shadow: 0px 0px 4px #d6dbe1;
     background-color: $white;
-
-    &--col-6 {
-      //grid-column: 1/7;
-      //grid-row: 1/2;
-      //
-      //@include bp($xs) {
-      //  height: 300px;
-      //}
-      //@include bp($lg) {
-      //  height: 500px;
-      //}
-
-      //&:last-of-type {
-      //  grid-row: 4/5;
-      //  @include bp($sm) {
-      //    grid-row: 3/4;
-      //  }
-      //}
-    }
-
-    &--col-2 {
-      //&-5-7 {
-      //  grid-column: 1/7;
-      //  grid-row: 3/4;
-      //  @include bp($sm) {
-      //    grid-column: 5/7;
-      //    grid-row: 2/3;
-      //  }
-      //}
-      //&-1-3 {
-      //  grid-column: 1/7;
-      //  grid-row: 4/5;
-      //  @include bp($sm) {
-      //    grid-column: 1/3;
-      //    grid-row: 3/4;
-      //  }
-      //}
-    }
-
-    &--col-4 {
-      //&-1-5 {
-      //  grid-column: 1/7;
-      //  grid-row: 2/3;
-      //  @include bp($sm) {
-      //    grid-column: 1/5;
-      //    grid-row: 2/3;
-      //  }
-      //}
-      //&-3-7 {
-      //  grid-column: 1/7;
-      //  grid-row: 5/6;
-      //  @include bp($sm) {
-      //    grid-column: 3/7;
-      //    grid-row: 3/4;
-      //  }
-      //}
-    }
-
-    &--col-3 {
-      //grid-column: 1/7;
-      //
-      //&-1-4 {
-      //  grid-row: 11/12;
-      //  @include bp($sm) {
-      //    grid-column: 1/4;
-      //    grid-row: 8/9;
-      //  }
-      //}
-      //&-4-7 {
-      //  grid-row: 12/13;
-      //  @include bp($sm) {
-      //    grid-column: 4/7;
-      //    grid-row: 8/9;
-      //  }
-      //}
-    }
   }
 }
 
