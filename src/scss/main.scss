@@ -8,9 +8,8 @@
 @import "layout/grid";
 @import "layout/list";
 @import "layout/register";
-@import "layout/subgrid";
+@import "layout/table";
 
-@import "component/input";
 @import "component/button";
 @import "component/icon";
 @import "component/separator";
@@ -21,12 +20,9 @@
 @import "component/sale";
 @import "component/favorites";
 @import "component/shopping";
-@import "component/qty";
 @import "component/group-qty";
-@import "component/table-title";
-@import "component/table-product";
-@import "component/table-total";
 @import "component/group-field";
+@import "component/input-field";
 @import "component/social-stat";
 @import "component/media-controls";
 @import "component/activations";
@@ -43,7 +39,6 @@
 @import "component/music-player";
 @import "component/page";
 @import "component/catalog";
-@import "component/cart";
 
 
 

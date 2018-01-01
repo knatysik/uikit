@@ -9,7 +9,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var normalize = require('node-normalize-scss');
 
 gulp.task('default', ['build', 'server', 'watch']);
-gulp.task('build', ['sass','html', 'js', 'images']);
+gulp.task('build', ['sass','html', 'js', 'assets']);
 
 gulp.task('sass', function () {
   return gulp.src('./src/scss/*.scss')
@@ -52,8 +52,8 @@ gulp.task('server', function () {
   });
 });
 
-gulp.task('images', function () {
-  gulp.src('./src/images/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./build/images/'))
+gulp.task('assets', function () {
+  gulp.src('./src/assets/**/*')
+    //.pipe(imagemin())
+    .pipe(gulp.dest('./build/assets/'))
 });

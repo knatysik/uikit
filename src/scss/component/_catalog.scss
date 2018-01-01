@@ -6,7 +6,7 @@
   height: 100%;
 
   &__picture {
-    background: url("../images/catalog.png") no-repeat center center;
+    background: url("../assets/images/catalog.png") no-repeat center center;
     background-size: cover;
     min-height: 250px;
   }
@@ -54,7 +54,7 @@
     }
 
     &__all {
-      border: 1px solid $border-color;
+      border: 1px solid $light-gray;
       border-radius: 20px;
       padding: 5px 12px;
       margin: 5px;

@@ -1,0 +1,134 @@
+$block: l-table;
+
+.#{$block} {
+
+  &__title {
+    display: none;
+
+    .#{$block}__col {
+      font-size: 16px;
+    }
+
+    &--mobile {
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+
+      @include bp($sm) {
+        display: none;
+      }
+    }
+
+    @include bp($sm) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__body {
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+
+    .#{$block}__col--price, .#{$block}__col--total {
+      color: $color-text;
+    }
+  }
+
+  &__footer {
+    padding: 30px;
+
+    .#{$block}__row {
+      flex-direction: column;
+      align-items: flex-end;
+
+      @include bp($sm) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .#{$block}__col {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        text-align: right;
+        margin-top: 0;
+      }
+
+      .c-button {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted $light-gray;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @include bp($sm) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      border-bottom: none;
+    }
+  }
+
+  &__col {
+    text-align: left;
+
+    &--picture {
+      width: 90px;
+      text-align: center;
+
+      img {
+        max-width: 60px;
+      }
+    }
+
+    &--name {
+      flex-grow: 1;
+      width: calc(100% - 90px);
+
+      @include bp($sm) {
+        width: auto;
+      }
+    }
+
+    &--qty {
+      width: 150px;
+      text-align: center;
+    }
+
+    &--price, &--total {
+      width: 85px;
+    }
+
+    &--close {
+      width: 40px;
+      cursor: pointer;
+    }
+  }
+
+  &__cell {
+    padding: 15px;
+  }
+
+  &__total-price {
+    color: $color-title;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  a {
+    color: $color-title;
+  }
+}

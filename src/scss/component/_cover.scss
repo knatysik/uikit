@@ -5,7 +5,7 @@
 
   &__picture {
     flex-grow: 1;
-    background: url("../images/summer.png") no-repeat;
+    background: url("../assets/images/summer.png") no-repeat;
     background-position: center;
     background-size: cover;
     width: 30%;
@@ -17,7 +17,7 @@
 
   &__text {
     margin-bottom: 0;
-    color: $border-btn;
+    color: $dark-gray;
   }
 
   &__body {
@@ -57,7 +57,7 @@
   }
 }
 .c-cover--jacket .c-cover__picture {
-  background: $white url("../images/jacket.png") no-repeat right bottom;
+  background: $white url("../assets/images/jacket.png") no-repeat right bottom;
   background-size: contain;
   width: 100%;
 }

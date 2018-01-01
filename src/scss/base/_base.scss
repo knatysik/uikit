@@ -1,20 +1,26 @@
-input, button {
-  outline: none;
-  border: none;
-}
-button {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
 body {
   background: #e1e7ed;
   color: $color-title;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {

@@ -1,3 +1,5 @@
+$areas: welcome comment activations profile video book article chart
+mail coverSummer coverJacket page catalog checkout;
 .l-grid {
   display: grid;
   grid-gap: 22px 22px;
@@ -12,8 +14,8 @@
   "article article article article article article"
   "chart chart chart chart chart chart"
   "mail mail mail mail mail mail"
-  "cover-summer cover-summer cover-summer cover-summer cover-summer cover-summer"
-  "cover-jacket cover-jacket cover-jacket cover-jacket cover-jacket cover-jacket"
+  "coverSummer coverSummer coverSummer coverSummer coverSummer coverSummer"
+  "coverJacket coverJacket coverJacket coverJacket coverJacket coverJacket"
   "page page page page page page"
   "catalog catalog catalog catalog catalog catalog"
   "checkout checkout checkout checkout checkout checkout";
@@ -30,7 +32,7 @@
       "book book book book book book"
       "article article article article article article"
       "chart chart chart chart mail mail"
-      "cover-summer cover-summer cover-summer cover-jacket cover-jacket cover-jacket"
+      "coverSummer coverSummer coverSummer coverJacket coverJacket coverJacket"
       "page page catalog catalog catalog catalog"
       "checkout checkout checkout checkout checkout checkout";
   }
@@ -41,66 +43,8 @@
   }
 }
 
-.welcome {
-  grid-area: welcome;
-  height: 350px;
-  @include bp($sm) {
-    height: 500px;
-  }
-}
-
-.activations {
-  grid-area: activations;
-}
-
-.comment {
-  grid-area: comment;
-}
-
-.profile {
-  grid-area: profile;
-}
-
-.video {
-  grid-area: video;
-}
-
-.book {
-  grid-area: book;
-}
-
-.article {
-  grid-area: article;
-}
-
-.chart {
-  grid-area: chart;
-}
-
-.mail {
-  grid-area: mail;
-}
-
-.music-player {
-  grid-area: music-player;
-}
-
-.cover-summer {
-  grid-area: cover-summer;
-}
-
-.cover-jacket {
-  grid-area: cover-jacket;
-}
-
-.page {
-  grid-area: page;
-}
-
-.catalog {
-  grid-area: catalog;
-}
-
-.checkout {
-  grid-area: checkout;
+@each $area in $areas  {
+ div[class*='--area-#{$area}'] {
+   grid-area: $area;
+ }
 }

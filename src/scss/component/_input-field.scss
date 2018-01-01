@@ -1,0 +1,29 @@
+.c-input-field {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-top: 15px;
+  margin-bottom: 20px;
+
+  @include bp($sm) {
+    align-items: center;
+    flex-direction: row;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__label {
+    color: $color-text;
+    letter-spacing: 0.8px;
+  }
+
+  &__input{
+    border: 1px solid $light-gray;
+    margin-left: 10px;
+    width: 50%;
+
+    @include bp($sm) {
+      width: auto;
+    }
+  }
+}

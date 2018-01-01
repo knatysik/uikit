@@ -4,7 +4,7 @@
   font-family: sans-serif;
 
   &__picture {
-    background: url("../images/book.png") no-repeat center center;
+    background: url("../assets/images/book.png") no-repeat center center;
     background-size: cover;
     height: 280px;
 
@@ -56,7 +56,7 @@
   }
 
   &__genre {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $light-gray;
 
     p {
       color: $color-title;
@@ -68,8 +68,8 @@
 
   &__title {
     font-size: 30px;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
     padding: 55px 0;
     margin: 1px 0;
 
@@ -85,7 +85,7 @@
   }
 
   &__publish {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $light-gray;
     padding-top: 2px;
 
     p {

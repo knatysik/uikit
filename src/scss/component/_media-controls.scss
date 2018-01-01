@@ -22,7 +22,7 @@
   }
 
   #playpause {
-    background: url("../images/video-play.svg") no-repeat center center;
+    background: url("../assets/images/video-play.svg") no-repeat center center;
     min-width: 40px;
     min-height: 40px;
     margin-right: 10px;
@@ -34,12 +34,12 @@
     @include tooltip(auto, 0);
 
     &.play {
-      background: url("../images/video-pause.svg") no-repeat center center;
+      background: url("../assets/images/video-pause.svg") no-repeat center center;
     }
   }
 
   &__fullScreen {
-    background: url("../images/video-fullScreen.svg") no-repeat center center;
+    background: url("../assets/images/video-fullScreen.svg") no-repeat center center;
     width: 16px;
     height: 16px;
     background-size: contain;
@@ -54,7 +54,7 @@
 
   &__volume {
     display: none;
-    background: url("../images/video-volume.svg") no-repeat center center;
+    background: url("../assets/images/video-volume.svg") no-repeat center center;
     width: 20px;
     height: 16px;
     background-size: contain;

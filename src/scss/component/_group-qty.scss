@@ -3,4 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  &__button {
+    font-family: monospace;
+  }
+
+  &__value {
+    padding: 0 10px;
+  }
 }

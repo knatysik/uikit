@@ -17,12 +17,12 @@
     align-self: center;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $light-gray;
 
     @include bp($sm) {
       padding: 0;
       border-right: none;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $light-gray;
     }
 
     &:last-child {

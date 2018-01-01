@@ -6,7 +6,7 @@
   height: 100%;
 
   &__picture {
-    background: url("../images/profile-bg.png") no-repeat center center;
+    background: url("../assets/images/profile-bg.png") no-repeat center center;
     background-size: cover;
     min-height: 150px;
   }
@@ -18,7 +18,7 @@
 
   &__stats {
     padding: 30px;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $light-gray;
 
     .l-profile {
       @extend %clean-list;

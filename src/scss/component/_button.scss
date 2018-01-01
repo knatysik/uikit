@@ -18,12 +18,12 @@
 
   &--outline {
     background-color: $white;
-    border: 1px solid $border-btn;
+    border: 1px solid $dark-gray;
     color: $color-title;
     padding: 15px 35px;
 
     &:hover {
-      background-color: $border-btn;
+      background-color: $dark-gray;
       color: $white;
     }
   }
@@ -31,6 +31,10 @@
   &--action {
     background-color: $action;
     padding: 15px 35px;
+  }
+
+  &--small {
+    padding: 5px 8px;
   }
 
   &:hover {
