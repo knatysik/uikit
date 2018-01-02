@@ -15,22 +15,24 @@
 
   &--rotate {
     &:hover {
+      cursor: pointer;
 
       polygon {
         fill: $danger;
         stroke: $danger;
         stroke-width: 80px;
-        animation-name: rotateClose;
-        animation-duration: .3s;
-        transform-origin: 50% 50%;
+        @extend %rotate;
+      }
+
+      path{
+        @extend %rotate;
       }
     }
 
-    @keyframes rotateClose {
+    @keyframes rotate {
       from {
         transform: rotate(0deg);
       }
-
       to {
         transform: rotate(90deg);
       }

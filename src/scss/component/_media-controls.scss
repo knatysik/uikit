@@ -1,30 +1,26 @@
-.c-media-controls {
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+$block: c-media;
+.#{$block} {
 
-  input, #currentTime, #duration {
-    margin: 0 10px;
-  }
+  &__controls {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 
-  div {
-    color: $color-text;
-  }
+    input, #currentTime, #duration {
+      margin: 0 10px;
+    }
 
-  #duration {
-    display: none;
-
-    @include bp($sm) {
-      display: block;
+    div {
+      color: $color-text;
     }
   }
 
-  #playpause {
+  &__pause {
     background: url("../assets/images/video-play.svg") no-repeat center center;
-    min-width: 40px;
-    min-height: 40px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 
     @include bp($sm) {
@@ -32,9 +28,72 @@
     }
 
     @include tooltip(auto, 0);
+  }
 
-    &.play {
-      background: url("../assets/images/video-pause.svg") no-repeat center center;
+  &__play {
+    @extend .c-media__pause;
+    background: url("../assets/images/video-pause.svg") no-repeat center center;
+  }
+
+  &__progress {
+    position: relative;
+    background-color: $light-gray;
+    $width-volume: 130px;
+    $width-duration: calc(100% - 80px - #{$width-volume});
+    width: $width-duration;
+    height: 2px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+
+    @include bp($sm) {
+      display: block;
+    }
+
+    &--volume {
+      width: $width-volume;
+
+      .#{$block}__progress--bar {
+        width: 100%;
+      }
+    }
+
+    &--bar {
+      position: absolute;
+      background-color: $action;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 2px;
+      z-index: 2;
+    }
+
+    &--line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      z-index: 3;
+    }
+
+    &:hover {
+      height: 5px;
+      transition-duration: .3s;
+
+      .#{$block}__progress--bar {
+        height: 5px;
+        transition-duration: .3s;
+      }
+    }
+  }
+
+  &__duration {
+    display: none;
+
+    @include bp($sm) {
+      display: block;
     }
   }
 
@@ -64,57 +123,6 @@
 
     @include bp($sm) {
       display: block;
-    }
-  }
-
-  .timer {
-    display: none;
-    background-color: #dde1e7;
-    width: 50%;
-    height: 2px;
-    margin-right: 10px;
-    position: relative;
-    cursor: pointer;
-
-    @include bp($sm) {
-      display: block;
-    }
-
-    &#volumeWrapper {
-      width: 15%;
-    }
-
-    &__bar {
-      position: absolute;
-      background-color: $action;
-      left: 0;
-      top: 0;
-      width: 0;
-      height: 2px;
-      z-index: 2;
-
-      &#volumeBar {
-        width: 100%;
-      }
-    }
-
-    &__line {
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      z-index: 3;
-    }
-
-    &:hover {
-      height: 5px;
-      transition-duration: .3s;
-
-      .timer__bar {
-        height: 5px;
-        transition-duration: .3s;
-      }
     }
   }
 }

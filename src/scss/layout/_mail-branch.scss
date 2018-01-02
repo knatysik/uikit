@@ -1,0 +1,52 @@
+$block: l-mail;
+
+.#{$block} {
+  @extend %clean-list;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-gray;
+    padding: 25px 30px;
+
+    &:hover {
+      cursor: pointer;
+
+      p {
+        color: $color-title;
+      }
+
+      .#{$block}__qty {
+        background: $default;
+        color: $white;
+      }
+    }
+  }
+
+  &__branch {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    .c-icon {
+      padding-right: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__qty {
+    padding: 5px;
+    border-radius: 5px;
+
+    &--active {
+      background: $default;
+      color: $white;
+    }
+  }
+}

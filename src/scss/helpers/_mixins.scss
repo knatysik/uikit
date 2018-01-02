@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+%rotate {
+  animation-name: rotate;
+  animation-duration: .3s;
+  transform-origin: 50% 50%;
+}
+
 @mixin bp($map) {
   $query: "";
   @if map-has-key($map, min) {

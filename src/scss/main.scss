@@ -7,6 +7,7 @@
 
 @import "layout/grid";
 @import "layout/list";
+@import "layout/mail-branch";
 @import "layout/register";
 @import "layout/table";
 
@@ -14,8 +15,6 @@
 @import "component/icon";
 @import "component/separator";
 @import "component/cover-name";
-@import "component/stats";
-@import "component/group-mail";
 @import "component/particle";
 @import "component/sale";
 @import "component/favorites";
@@ -26,9 +25,10 @@
 @import "component/social-stat";
 @import "component/media-controls";
 @import "component/activations";
+
 @import "component/welcome";
 @import "component/comment";
-@import "component/user";
+@import "component/avatar";
 @import "component/book";
 @import "component/cover";
 @import "component/profile";

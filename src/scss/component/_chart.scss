@@ -9,20 +9,15 @@
   &__body {
     background: $white;
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
 
-    .l-list-chart {
-      @extend %clean-list;
-      display: flex;
-      justify-content: space-between;
+    h5 {
+      letter-spacing: 0.8px;
+    }
 
-      @include bp($sm) {
-      }
-
-      &__item {
-
-        @include bp($sm) {
-        }
-      }
+    p {
+      margin-bottom: 0;
     }
   }
 }

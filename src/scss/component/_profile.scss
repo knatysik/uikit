@@ -11,7 +11,10 @@
     min-height: 150px;
   }
 
-  .c-user {
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: -70px;
     padding-bottom: 30px;
   }
@@ -19,25 +22,22 @@
   &__stats {
     padding: 30px;
     border-top: 1px solid $light-gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-    .l-profile {
-      @extend %clean-list;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    &-item {
 
-      .c-stats {
+      h5 {
+        text-transform: uppercase;
+        margin: 5px;
+        text-align: center;
+      }
 
-        &__qt {
-          text-transform: uppercase;
-          margin: 5px;
-          text-align: center;
-        }
-
-        &__desc {
-          margin-top: 0;
-          text-align: center;
-        }
+      p {
+        margin-top: 0;
+        text-align: center;
       }
     }
 

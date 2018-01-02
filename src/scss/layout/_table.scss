@@ -83,9 +83,10 @@ $block: l-table;
 
   &__col {
     text-align: left;
+    $width-picture: 90px;
 
     &--picture {
-      width: 90px;
+      width: $width-picture;
       text-align: center;
 
       img {
@@ -95,7 +96,7 @@ $block: l-table;
 
     &--name {
       flex-grow: 1;
-      width: calc(100% - 90px);
+      width: calc(100% - #{$width-picture});
 
       @include bp($sm) {
         width: auto;
@@ -113,7 +114,6 @@ $block: l-table;
 
     &--close {
       width: 40px;
-      cursor: pointer;
     }
   }
 

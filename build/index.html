@@ -84,7 +84,7 @@
     <div class="l-grid__item l-grid__item--area-comment">
         <div class="c-comment">
             <div class="c-comment__body">
-                <h3 class="c-comment__title">Along the great wall</h3>
+                <h4 class="c-comment__title">Along the great wall</h4>
                 <p class="c-comment__text">
                     Hello! My name is Alex Costa and this is my entry
                     for this week’s best picture award. I tried to catch
@@ -92,11 +92,11 @@
                     through time gathering memories and experiences.
                 </p>
                 <div class="c-comment__info">
-                    <div class="c-user c-user--no-desc">
-                        <div class="c-user__photo">
+                    <div class="c-comment__user">
+                        <div class="c-avatar">
                             <img src="../assets/images/Alex-Costa.png" alt="Alex Costa" />
                         </div>
-                        <span class="c-user__name">Alex Costa</span>
+                        <h6>Alex Costa</h6>
                     </div>
                     <div class="c-social-stat">
                         <div class="c-icon">
@@ -115,34 +115,26 @@
     <div class="l-grid__item l-grid__item--area-profile">
         <div class="c-profile">
             <div class="c-profile__picture"></div>
-            <div class="c-user c-user--desc">
-                <div class="c-user__photo">
+            <div class="c-profile__user">
+                <div class="c-avatar c-avatar--large">
                     <img src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay" />
                 </div>
-                <span class="c-user__name">Gordon Ramsay</span>
-                <p class="c-user__level">Master Chef</p>
+                <h3>Gordon Ramsay</h3>
+                <p>Master Chef</p>
             </div>
             <div class="c-profile__stats">
-                <ul class="l-profile">
-                    <li class="l-profile__item">
-                        <div class="c-stats">
-                            <p class="c-stats__qt">2.4m</p>
-                            <p class="c-stats__desc">Fans</p>
-                        </div>
-                    </li>
-                    <li class="l-profile__item">
-                        <div class="c-stats">
-                            <p class="c-stats__qt">202</p>
-                            <p class="c-stats__desc">Following</p>
-                        </div>
-                    </li>
-                    <li class="l-profile__item">
-                        <div class="c-stats">
-                            <p class="c-stats__qt">552</p>
-                            <p class="c-stats__desc">Posts</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="c-profile__stats-item">
+                    <h5>2.4m</h5>
+                    <p>Fans</p>
+                </div>
+                <div class="c-profile__stats-item">
+                    <h5>202</h5>
+                    <p>Following</p>
+                </div>
+                <div class="c-profile__stats-item">
+                    <h5>552</h5>
+                    <p>Posts</p>
+                </div>
                 <button class="c-button c-button--success">Follow</button>
             </div>
         </div>
@@ -150,25 +142,25 @@
     <div class="l-grid__item l-grid__item--area-video">
         <div class="c-media">
             <div class="c-media__player">
-                <video id="video" width="100%">
+                <video id="video" class="c-media__video" width="100%">
                     <source src="../assets/media/4k-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="c-media-controls">
-                <button id="playpause" class="paused c-media-controls__playpause" type="button" data-title="Play / Pause"></button>
-                <div id="currentTime" class="c-media-controls__currentTime">00:00</div>
-                <div id="timerWrapper" class="timer c-media-progress">
-                    <div id="timerBar" class="timer__bar c-media-progress__bar"></div>
-                    <div id="timerLine" class="timer__line c-media-progress__line"></div>
+            <div class="c-media__controls">
+                <button id="playpause" class="c-media__pause" type="button" data-title="Play / Pause"></button>
+                <div id="currentTime" class="c-media__currentTime">00:00</div>
+                <div id="timerWrapper" class="c-media__progress c-media__progress--time">
+                    <div id="timerBar" class="c-media__progress--bar"></div>
+                    <div id="timerLine" class="c-media__progress--line"></div>
                 </div>
-                <div id="duration" class="c-media-controls__duration"></div>
-                <button class="c-media-controls__volume" data-title="Volume"></button>
-                <div id="volumeWrapper" class="timer c-media-progress">
-                    <div id="volumeBar" class="timer__bar c-media-progress__bar"></div>
-                    <div id="volumeLine" class="timer__line c-media-progress__line"></div>
+                <div id="duration" class="c-media__duration"></div>
+                <button class="c-media__volume" data-title="Volume"></button>
+                <div id="volumeWrapper" class="c-media__progress c-media__progress--volume">
+                    <div id="volumeBar" class="c-media__progress--bar"></div>
+                    <div id="volumeLine" class="c-media__progress--line"></div>
                 </div>
-                <button id="fullScreen" class="c-media-controls__fullScreen" type="button" data-title="Full Screen"></button>
+                <button id="fullScreen" class="c-media__fullScreen" type="button" data-title="Full Screen"></button>
             </div>
         </div>
     </div>
@@ -248,20 +240,14 @@
         <div class="c-chart">
             <div class="c-chart__picture"></div>
             <div class="c-chart__body">
-                <ul class="l-list-chart">
-                    <li class="l-list-chart__item">
-                        <div class="c-stats">
-                            <p class="c-stats__qt">Starting balance</p>
-                            <p class="c-stats__desc">880.000,00 $</p>
-                        </div>
-                    </li>
-                    <li class="l-list-chart__item">
-                        <div class="c-stats">
-                            <p class="c-stats__qt">Amount transacted</p>
-                            <p class="c-stats__desc">201.990,99 $</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="c-chart__info">
+                    <h5>Starting balance</h5>
+                    <p>880.000,00 $</p>
+                </div>
+                <div class="c-chart__info">
+                    <h5>Amount transacted</h5>
+                    <p>201.990,99 $</p>
+                </div>
             </div>
         </div>
     </div>
@@ -276,7 +262,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="c-icon">
+                <div class="c-icon c-icon--rotate">
                     <svg class="settings" width="369.793px" height="369.792px" viewBox="0 0 369.793 369.792" style="enable-background:new 0 0 369.793 369.792;">
                         <path style="fill: #ffffff" d="M320.83,140.434l-1.759-0.627l-6.87-16.399l0.745-1.685c20.812-47.201,19.377-48.609,15.925-52.031L301.11,42.61
                             c-1.135-1.126-3.128-1.918-4.846-1.918c-1.562,0-6.293,0-47.294,18.57L247.326,60l-16.916-6.812l-0.679-1.684
@@ -295,109 +281,97 @@
                 </div>
             </div>
             <ul class="l-mail">
-                <li class="l-mail__item">
-                    <div class="c-group-mail">
-                        <div class="c-post-office">
-                            <div class="c-icon c-icon--small">
-                                <svg viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
-                                            <path fill="#000000" stroke="#000000" stroke-width="20px" d="M379.6,190c0.4-1.2,0.4-2.8,0-4L346.8,58c-2.8-10.4-12.4-18-23.2-18H60.4C49.2,40,40,47.2,37.2,58L4.4,186
-                                                c-0.4,1.2-0.4,2.8,0,4C1.6,195.6,0,201.6,0,208v96c0,22,18,40,40,40h304c22,0,40-18,40-40v-96C384,201.6,382.4,195.6,379.6,190z
-                                                 M52.4,62c1.2-4,4-6,8-6h263.2c3.6,0,6.8,2.4,8,6l28,109.2c-4.8-2-10-3.2-15.6-3.2h-73.6c-11.6,0-21.2,8-23.6,19.2
-                                                c-5.2,26-28.4,44.8-54.8,44.8c-26.4,0-49.6-18.8-54.8-44.8c-2.4-11.2-12-19.2-23.6-19.2H40c-5.6,0-10.8,1.2-15.6,3.2L52.4,62z
-                                                 M368,304c0,13.2-10.8,24-24,24H40c-13.2,0-24-10.8-24-24v-96c0-13.2,10.8-24,24-24h73.6c4,0,6.8,2.4,7.6,6.4
-                                                C128.4,223.6,158,248,192,248s63.6-24.4,70.8-57.6c0.8-4,4-6.4,7.6-6.4H344c13.2,0,24,10.8,24,24V304z"/>
-                                        </svg>
-                            </div>
-                            <div class="c-mail-title">Inbox</div>
+                <li class="l-mail__item l-mail__item--inbox">
+                    <div class="l-mail__branch">
+                        <div class="c-icon c-icon--small">
+                            <svg viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+                                        <path fill="#000000" stroke="#000000" stroke-width="20px" d="M379.6,190c0.4-1.2,0.4-2.8,0-4L346.8,58c-2.8-10.4-12.4-18-23.2-18H60.4C49.2,40,40,47.2,37.2,58L4.4,186
+                                            c-0.4,1.2-0.4,2.8,0,4C1.6,195.6,0,201.6,0,208v96c0,22,18,40,40,40h304c22,0,40-18,40-40v-96C384,201.6,382.4,195.6,379.6,190z
+                                             M52.4,62c1.2-4,4-6,8-6h263.2c3.6,0,6.8,2.4,8,6l28,109.2c-4.8-2-10-3.2-15.6-3.2h-73.6c-11.6,0-21.2,8-23.6,19.2
+                                            c-5.2,26-28.4,44.8-54.8,44.8c-26.4,0-49.6-18.8-54.8-44.8c-2.4-11.2-12-19.2-23.6-19.2H40c-5.6,0-10.8,1.2-15.6,3.2L52.4,62z
+                                             M368,304c0,13.2-10.8,24-24,24H40c-13.2,0-24-10.8-24-24v-96c0-13.2,10.8-24,24-24h73.6c4,0,6.8,2.4,7.6,6.4
+                                            C128.4,223.6,158,248,192,248s63.6-24.4,70.8-57.6c0.8-4,4-6.4,7.6-6.4H344c13.2,0,24,10.8,24,24V304z"/>
+                                    </svg>
                         </div>
-                        <div class="c-block-bg c-block-bg--active">4021</div>
+                        <p>Inbox</p>
                     </div>
+                    <div class="l-mail__qty l-mail__qty--active">4021</div>
                 </li>
-                <li class="l-mail__item">
-                    <div class="c-group-mail">
-                        <div class="c-post-office">
-                            <div class="c-icon c-icon--small">
-                                <svg viewBox="0 0 511.626 511.627" style="enable-background:new 0 0 511.626 511.627;">
-                                    <path d="M498.208,68.235c-8.945-8.947-19.701-13.418-32.261-13.418H45.682c-12.562,0-23.318,4.471-32.264,13.418
-                C4.471,77.18,0,87.935,0,100.499v310.633c0,12.566,4.471,23.312,13.418,32.257c8.945,8.953,19.701,13.422,32.264,13.422h420.266
-                c12.56,0,23.315-4.469,32.261-13.422c8.949-8.945,13.418-19.697,13.418-32.257V100.499
-                C511.626,87.935,507.158,77.18,498.208,68.235z M475.078,411.125c0,2.475-0.903,4.616-2.714,6.424
-                c-1.81,1.81-3.949,2.706-6.42,2.706H45.679c-2.474,0-4.616-0.896-6.423-2.706c-1.809-1.808-2.712-3.949-2.712-6.424V191.858
-                c6.09,6.852,12.657,13.134,19.7,18.843c51.012,39.209,91.553,71.374,121.627,96.5c9.707,8.186,17.607,14.561,23.697,19.13
-                c6.09,4.571,14.322,9.185,24.694,13.846c10.373,4.668,20.129,6.991,29.265,6.991h0.287h0.284c9.134,0,18.894-2.323,29.263-6.991
-                c10.376-4.661,18.613-9.274,24.701-13.846c6.089-4.569,13.99-10.944,23.698-19.13c30.074-25.126,70.61-57.291,121.624-96.5
-                c7.043-5.708,13.613-11.991,19.694-18.843V411.125L475.078,411.125z M475.078,107.92v3.14c0,11.229-4.421,23.745-13.271,37.543
-                c-8.851,13.798-18.419,24.792-28.691,32.974c-36.74,28.936-74.897,59.101-114.495,90.506c-1.14,0.951-4.474,3.757-9.996,8.418
-                c-5.514,4.668-9.894,8.241-13.131,10.712c-3.241,2.478-7.471,5.475-12.703,8.993c-5.236,3.518-10.041,6.14-14.418,7.851
-                c-4.377,1.707-8.47,2.562-12.275,2.562h-0.284h-0.287c-3.806,0-7.895-0.855-12.275-2.562c-4.377-1.711-9.185-4.333-14.417-7.851
-                c-5.231-3.519-9.467-6.516-12.703-8.993c-3.234-2.471-7.614-6.044-13.132-10.712c-5.52-4.661-8.854-7.467-9.995-8.418
-                c-39.589-31.406-77.75-61.57-114.487-90.506c-27.981-22.076-41.969-49.106-41.969-81.083c0-2.472,0.903-4.615,2.712-6.421
-                c1.809-1.809,3.949-2.714,6.423-2.714h420.266c1.52,0.855,2.854,1.093,3.997,0.715c1.143-0.385,1.998,0.331,2.566,2.138
-                c0.571,1.809,1.095,2.664,1.57,2.57c0.477-0.096,0.764,1.093,0.859,3.571c0.089,2.473,0.137,3.718,0.137,3.718V107.92
-                L475.078,107.92z"/>
-                                </svg>
-                            </div>
-                            <div class="c-mail-title">Sent Mail</div>
+                <li class="l-mail__item l-mail__item--sent">
+                    <div class="l-mail__branch">
+                        <div class="c-icon c-icon--small">
+                            <svg viewBox="0 0 511.626 511.627" style="enable-background:new 0 0 511.626 511.627;">
+                                <path d="M498.208,68.235c-8.945-8.947-19.701-13.418-32.261-13.418H45.682c-12.562,0-23.318,4.471-32.264,13.418
+            C4.471,77.18,0,87.935,0,100.499v310.633c0,12.566,4.471,23.312,13.418,32.257c8.945,8.953,19.701,13.422,32.264,13.422h420.266
+            c12.56,0,23.315-4.469,32.261-13.422c8.949-8.945,13.418-19.697,13.418-32.257V100.499
+            C511.626,87.935,507.158,77.18,498.208,68.235z M475.078,411.125c0,2.475-0.903,4.616-2.714,6.424
+            c-1.81,1.81-3.949,2.706-6.42,2.706H45.679c-2.474,0-4.616-0.896-6.423-2.706c-1.809-1.808-2.712-3.949-2.712-6.424V191.858
+            c6.09,6.852,12.657,13.134,19.7,18.843c51.012,39.209,91.553,71.374,121.627,96.5c9.707,8.186,17.607,14.561,23.697,19.13
+            c6.09,4.571,14.322,9.185,24.694,13.846c10.373,4.668,20.129,6.991,29.265,6.991h0.287h0.284c9.134,0,18.894-2.323,29.263-6.991
+            c10.376-4.661,18.613-9.274,24.701-13.846c6.089-4.569,13.99-10.944,23.698-19.13c30.074-25.126,70.61-57.291,121.624-96.5
+            c7.043-5.708,13.613-11.991,19.694-18.843V411.125L475.078,411.125z M475.078,107.92v3.14c0,11.229-4.421,23.745-13.271,37.543
+            c-8.851,13.798-18.419,24.792-28.691,32.974c-36.74,28.936-74.897,59.101-114.495,90.506c-1.14,0.951-4.474,3.757-9.996,8.418
+            c-5.514,4.668-9.894,8.241-13.131,10.712c-3.241,2.478-7.471,5.475-12.703,8.993c-5.236,3.518-10.041,6.14-14.418,7.851
+            c-4.377,1.707-8.47,2.562-12.275,2.562h-0.284h-0.287c-3.806,0-7.895-0.855-12.275-2.562c-4.377-1.711-9.185-4.333-14.417-7.851
+            c-5.231-3.519-9.467-6.516-12.703-8.993c-3.234-2.471-7.614-6.044-13.132-10.712c-5.52-4.661-8.854-7.467-9.995-8.418
+            c-39.589-31.406-77.75-61.57-114.487-90.506c-27.981-22.076-41.969-49.106-41.969-81.083c0-2.472,0.903-4.615,2.712-6.421
+            c1.809-1.809,3.949-2.714,6.423-2.714h420.266c1.52,0.855,2.854,1.093,3.997,0.715c1.143-0.385,1.998,0.331,2.566,2.138
+            c0.571,1.809,1.095,2.664,1.57,2.57c0.477-0.096,0.764,1.093,0.859,3.571c0.089,2.473,0.137,3.718,0.137,3.718V107.92
+            L475.078,107.92z"/>
+                            </svg>
                         </div>
-                        <div class="c-block-bg">2044</div>
+                        <p>Sent Mail</p>
                     </div>
+                    <div class="l-mail__qty">2044</div>
                 </li>
-                <li class="l-mail__item">
-                    <div class="c-group-mail">
-                        <div class="c-post-office">
-                            <div class="c-icon c-icon--small">
-                                <svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                    <g>
-                                        <path d="M508.022,185.826L422,92.635V15c0-8.284-6.716-15-15-15H105c-8.284,0-15,6.716-15,15v77.635l-86.022,93.19
-                                            C1.42,188.597,0,192.229,0,196v271c0,24.792,20.186,45,45,45h422c24.826,0,45-20.223,45-45V196
-                                            C512,192.229,510.58,188.597,508.022,185.826z M422,136.865l53.53,57.991L422,241.724V136.865z M120,30h272v237.99L256,387.063
-                                            L120,267.99V30z M90,136.865v104.859l-53.53-46.868L90,136.865z M30,463.932V229.065l134.11,117.418L30,463.932z M54.904,482
-                                            L186.88,366.419l59.239,51.866c2.828,2.476,6.354,3.714,9.881,3.714s7.053-1.238,9.881-3.714l59.239-51.866L457.096,482H54.904z
-                                             M482,463.931L347.891,346.483L482,229.065V463.931z"/>
-                                    </g>
-                                    <g>
-                                        <path d="M256,91c-49.626,0-90,40.374-90,90c0,49.583,40.35,90,90,90c49.626,0,90-40.374,90-90C346,131.426,305.661,91,256,91z
-                                             M196,181c0-33.084,26.916-60,60-60c11.111,0,21.52,3.047,30.454,8.333l-82.121,82.12C199.047,202.52,196,192.111,196,181z
-                                             M256,241c-11.111,0-21.52-3.047-30.454-8.333l82.121-82.12C312.953,159.48,316,169.889,316,181C316,214.084,289.084,241,256,241z
-                                            "/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="c-mail-title">Spam</div>
+                <li class="l-mail__item l-mail__item--spam">
+                    <div class="l-mail__branch">
+                        <div class="c-icon c-icon--small">
+                            <svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g>
+                                    <path d="M508.022,185.826L422,92.635V15c0-8.284-6.716-15-15-15H105c-8.284,0-15,6.716-15,15v77.635l-86.022,93.19
+                                        C1.42,188.597,0,192.229,0,196v271c0,24.792,20.186,45,45,45h422c24.826,0,45-20.223,45-45V196
+                                        C512,192.229,510.58,188.597,508.022,185.826z M422,136.865l53.53,57.991L422,241.724V136.865z M120,30h272v237.99L256,387.063
+                                        L120,267.99V30z M90,136.865v104.859l-53.53-46.868L90,136.865z M30,463.932V229.065l134.11,117.418L30,463.932z M54.904,482
+                                        L186.88,366.419l59.239,51.866c2.828,2.476,6.354,3.714,9.881,3.714s7.053-1.238,9.881-3.714l59.239-51.866L457.096,482H54.904z
+                                         M482,463.931L347.891,346.483L482,229.065V463.931z"/>
+                                </g>
+                                <g>
+                                    <path d="M256,91c-49.626,0-90,40.374-90,90c0,49.583,40.35,90,90,90c49.626,0,90-40.374,90-90C346,131.426,305.661,91,256,91z
+                                         M196,181c0-33.084,26.916-60,60-60c11.111,0,21.52,3.047,30.454,8.333l-82.121,82.12C199.047,202.52,196,192.111,196,181z
+                                         M256,241c-11.111,0-21.52-3.047-30.454-8.333l82.121-82.12C312.953,159.48,316,169.889,316,181C316,214.084,289.084,241,256,241z
+                                        "/>
+                                </g>
+                            </svg>
                         </div>
-                        <div class="c-block-bg"></div>
+                        <p>Spam</p>
                     </div>
+                    <div class="l-mail__qty"></div>
                 </li>
-                <li class="l-mail__item">
-                    <div class="c-group-mail">
-                        <div class="c-post-office">
-                            <div class="c-icon c-icon--small">
-                                <svg viewBox="0 0 172.541 172.541" style="enable-background:new 0 0 172.541 172.541;" xml:space="preserve">
-                                    <g>
-                                        <path d="M166.797,25.078h-13.672h-29.971V0H49.388v25.078H19.417H5.744v15h14.806l10,132.463h111.443l10-132.463h14.805V25.078z
-                                             M64.388,15h43.766v10.078H64.388V15z M128.083,157.541H44.46L35.592,40.078h13.796h73.766h13.796L128.083,157.541z"/>
-                                        <rect x="80.271" y="65.693" width="12" height="66.232"/>
-                                        <rect x="57.271" y="65.693" width="12" height="66.232"/>
-                                        <rect x="103.271" y="65.693" width="12" height="66.232"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="c-mail-title">Trash</div>
+                <li class="l-mail__item l-mail__item--trash">
+                    <div class="l-mail__branch">
+                        <div class="c-icon c-icon--small">
+                            <svg viewBox="0 0 172.541 172.541" style="enable-background:new 0 0 172.541 172.541;" xml:space="preserve">
+                                <g>
+                                    <path d="M166.797,25.078h-13.672h-29.971V0H49.388v25.078H19.417H5.744v15h14.806l10,132.463h111.443l10-132.463h14.805V25.078z
+                                         M64.388,15h43.766v10.078H64.388V15z M128.083,157.541H44.46L35.592,40.078h13.796h73.766h13.796L128.083,157.541z"/>
+                                    <rect x="80.271" y="65.693" width="12" height="66.232"/>
+                                    <rect x="57.271" y="65.693" width="12" height="66.232"/>
+                                    <rect x="103.271" y="65.693" width="12" height="66.232"/>
+                                </g>
+                            </svg>
                         </div>
-                        <div class="c-block-bg"></div>
+                        <p>Trash</p>
                     </div>
+                    <div class="l-mail__qty"></div>
                 </li>
             </ul>
-            <div class="c-mail__wrap">
-                <div class="c-mail__tags">
-                    <p class="c-mail__tag-name">tags:</p>
-                    <ul class="l-tags">
-                        <li class="l-tags__item l-tags__item--success"></li>
-                        <li class="l-tags__item l-tags__item--curefully"></li>
-                        <li class="l-tags__item l-tags__item--danger"></li>
-                        <li class="l-tags__item l-tags__item--info"></li>
-                    </ul>
-                </div>
+            <div class="c-mail__tags">
+                <p class="c-mail__tag--name">tags:</p>
+                <div class="c-mail__tags-item c-mail__tags-item--success"></div>
+                <div class="c-mail__tags-item c-mail__tags-item--carefully"></div>
+                <div class="c-mail__tags-item c-mail__tags-item--danger"></div>
+                <div class="c-mail__tags-item c-mail__tags-item--info"></div>
                 <button class="c-button c-button--default">Compose</button>
             </div>
         </div>
@@ -411,9 +385,9 @@
                     Fashion means passion
                 </p>
                 <div class="c-cover-name">
-                    <h3 class="c-cover-name__title">
+                    <h4 class="c-cover-name__title">
                         Summer 2015
-                    </h3>
+                    </h4>
                     <div class="c-cover-name__desc">
                         Browse collection &rarr;
                     </div>
@@ -426,9 +400,9 @@
             <div class="c-cover__picture"></div>
             <div class="c-cover__body">
                 <div class="c-cover-name">
-                    <h3 class="c-cover-name__title">
+                    <h4 class="c-cover-name__title">
                         Jackets
-                    </h3>
+                    </h4>
                     <div class="c-cover-name__desc">
                         View Products &rarr;
                     </div>
@@ -445,7 +419,7 @@
         <div class="c-page">
             <div class="c-page__picture"></div>
             <div class="c-page__body">
-                <h4 class="c-page__title">Amazing Furniture</h4>
+                <h3 class="c-page__title">Amazing Furniture</h3>
                 <p class="c-page__text">
                     Modern, elegant and eye catching.
                     These are the features this furniture offers.
@@ -460,7 +434,7 @@
             <div class="c-catalog__picture"></div>
             <div class="c-catalog__body">
                 <div class="c-catalog__info">
-                    <h4 class="c-catalog__title">Modern Bedroom</h4>
+                    <h3 class="c-catalog__title">Modern Bedroom</h3>
                     <div class="c-catalog__price">4.199$</div>
                 </div>
                 <p class="c-catalog__text">
@@ -472,23 +446,18 @@
                 <div class="c-customers">
                     <ul class="l-register">
                         <li class="l-register__item">
-                            <div class="c-user c-user--no-desc">
-                                <div class="c-user__photo">
-                                    <img src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay" />
-                                </div>
+                            <div class="c-avatar">
+                                <img src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay" />
                             </div>
                         </li>
                         <li class="l-register__item">
-                            <div class="c-user c-user--no-desc">
-                                <div class="c-user__photo">
-                                    <img src="../assets/images/Lindsey-Stirling.png" alt="Lindsey Stirling" />
-                                </div>
+                            <div class="c-avatar">
+                                <img src="../assets/images/Lindsey-Stirling.png" alt="Lindsey Stirling" />
                             </div>
                         </li>
                         <li class="l-register__item">
-                            <div class="c-user c-user--no-desc">
-                                <div class="c-user__photo">
-                                    <img src="../assets/images/Alex-Costa.png" alt="Alex Costa" />                                    </div>
+                            <div class="c-avatar">
+                                <img src="../assets/images/Alex-Costa.png" alt="Alex Costa" />
                             </div>
                         </li>
                     </ul>

@@ -13,10 +13,10 @@ function videoLoaded () {
 
   function playPauseMedia() {
     if (video.paused) {
-      playPause.className = 'play'
+      playPause.className = 'c-media__play'
       return video.play()
     }
-    playPause.className = 'pause'
+    playPause.className = 'c-media__pause'
     video.pause()
   }
 
