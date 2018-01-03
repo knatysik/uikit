@@ -15,10 +15,6 @@
     padding: 30px;
   }
 
-  &__text {
-    margin-bottom: 0;
-  }
-
   &__info {
     display: flex;
     justify-content: space-between;
@@ -31,36 +27,52 @@
     margin: 0;
   }
 
-  .c-customers {
+  &__people {
+    display: none;
+
+    @include bp($xs) {
+      display: flex;
+    }
+
+    .c-avatar {
+      padding: 5px;
+      flex-grow: 1;
+      align-self: center;
+    }
+  }
+
+  &__move {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include bp($sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__shopping {
+    display: flex;
     padding-bottom: 15px;
 
-    @include bp($md) {
-      padding-bottom: 0px;
+    @include bp($sm) {
+      padding-bottom: 0;
     }
+  }
 
-    &__catalog {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-      padding-left: 15px;
+  &__customers {
+    display: flex;
+    align-items: center;
 
-      @include bp($xs) {
-        flex-direction: row;
-        padding-left: 0;
-      }
-    }
-
-    &__all {
+    &-all {
       border: 1px solid $light-gray;
       border-radius: 20px;
       padding: 5px 12px;
       margin: 5px;
     }
 
-    &__buy {
+    &-buy {
       padding: 0;
       margin: 0;
 
@@ -72,11 +84,9 @@
 
   .c-button {
     width: 100%;
-    width: -moz-available;
 
     @include bp($sm) {
       width: auto;
-      //width: -moz-max-content;
     }
   }
 }
