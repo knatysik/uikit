@@ -1,4 +1,5 @@
-.c-cover {
+$block: c-cover;
+.#{$block} {
   display: flex;
   font-family: sans-serif;
   height: 360px;
@@ -31,32 +32,34 @@
     @include bp($md) {
       padding: 50px;
     }
+  }
 
-    .c-cover-name__title {
-      font-family: Serif;
-      font-style: italic;
-      font-size: 45px;
-      margin-top: 0px;
-      text-transform: capitalize;
-    }
+  &__title {
+    font-family: Serif;
+    font-style: italic;
+    font-size: 45px;
+    margin-top: 0px;
+    text-transform: capitalize;
   }
 }
-.c-cover--jacket {
+
+.#{$block}--jacket {
   flex-direction: row-reverse;
 
-  .c-cover__body {
+  .#{$block}__body {
     justify-content: flex-start;
   }
 
-  .c-cover-name {
+  .#{$block}__name {
     padding-bottom: 10px;
+  }
 
-    &__title {
-      margin-bottom: 0;
-    }
+  .#{$block}__title {
+    margin-bottom: 0;
   }
 }
-.c-cover--jacket .c-cover__picture {
+
+.#{$block}--jacket .#{$block}__picture {
   background: $white url("../assets/images/jacket.png") no-repeat right bottom;
   background-size: contain;
   width: 100%;
