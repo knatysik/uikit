@@ -1,4 +1,8 @@
 .c-social-stat {
   display: flex;
   flex-direction: column;
+
+  &--row {
+    flex-direction: row;
+  }
 }

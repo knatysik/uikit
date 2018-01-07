@@ -16,12 +16,8 @@
     }
 
     &:before {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 50%;
       @include triangle(10px, white, down);
+
       @include bp($md) {
         right: 0;
         top: 50%;
@@ -47,10 +43,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .c-social-stat {
-      flex-direction: row;
-    }
   }
 
   &__user {

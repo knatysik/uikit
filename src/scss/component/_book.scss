@@ -1,4 +1,5 @@
-.c-book {
+$block: c-book;
+.#{$block} {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -49,20 +50,17 @@
     @include bp($md) {
       padding: 88px;
     }
-
-    p {
-      display: inline;
-    }
   }
 
   &__genre {
     border-bottom: 1px solid $light-gray;
 
-    p {
+    &-name {
       color: $color-title;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 12px;
+      font-weight: 600;
     }
   }
 
@@ -87,23 +85,23 @@
   &__publish {
     border-top: 1px solid $light-gray;
     padding-top: 2px;
+  }
 
-    p {
-      padding-right: 10px;
+  &__author, &__comment, &__date {
+    padding-right: 10px;
 
-      @include bp($xs) {
-        padding-right: 5px;
-        word-spacing: -3px;
-      }
-
-      @include bp($sm) {
-        padding-right: 25px;
-      }
-
-      .c-book__author--name {
-        color: $help;
-      }
+    @include bp($xs) {
+      padding-right: 5px;
+      word-spacing: -3px;
     }
+
+    @include bp($sm) {
+      padding-right: 25px;
+    }
+  }
+
+  &__author--name {
+    color: $help;
   }
 
   &__text {

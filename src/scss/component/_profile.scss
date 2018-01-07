@@ -1,3 +1,4 @@
+$img-height: 150px;
 .c-profile {
   background: $white;
   display: flex;
@@ -8,15 +9,14 @@
   &__picture {
     background: url("../assets/images/profile-bg.png") no-repeat center center;
     background-size: cover;
-    min-height: 150px;
+    min-height: $img-height;
   }
 
   &__user {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -70px;
-    padding-bottom: 30px;
+    transform: translateY(-$img-height/2);
   }
 
   &__stats {
@@ -39,10 +39,6 @@
         margin-top: 0;
         text-align: center;
       }
-    }
-
-    .c-button {
-      width: 100%;
     }
   }
 }

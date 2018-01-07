@@ -13,6 +13,17 @@
     }
   }
 
+  &--white {
+    svg {
+      path {
+        fill: $white;
+      }
+    polygon {
+      fill: $white;
+    }
+    }
+  }
+
   &--rotate {
     &:hover {
       cursor: pointer;
@@ -21,6 +32,7 @@
         fill: $danger;
         stroke: $danger;
         stroke-width: 80px;
+
         @extend %rotate;
       }
 

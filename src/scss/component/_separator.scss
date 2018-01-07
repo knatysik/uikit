@@ -13,7 +13,7 @@
   &__number-part {
     color: $color-number;
     font-size: 70px;
-    font-family: PTSans-serif;
+    font-family: 'PT Serif', serif;
     font-weight: 600;
     letter-spacing: 5px;
 
@@ -53,7 +53,7 @@
     @include bp($sm) {
       padding: 20px;
       transform: rotate(-90deg) translateY(50%);
-      background-color: #fff;
+      background-color: $white;
       transform-origin: left bottom;
       left: 50%;
       position: relative;

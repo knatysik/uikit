@@ -1,5 +1,6 @@
 .l-list {
   @extend %clean-list;
+
   display: flex;
   flex-direction: row;
   height: 100%;

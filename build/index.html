@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/assets/images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400, 400i, 700i" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Uikit</title>
 </head>
@@ -94,11 +95,11 @@
                 <div class="c-comment__info">
                     <div class="c-comment__user">
                         <div class="c-avatar">
-                            <img src="../assets/images/Alex-Costa.png" alt="Alex Costa" />
+                            <img class="c-avatar__foto" src="../assets/images/Alex-Costa.png" alt="Alex Costa" />
                         </div>
                         <h6>Alex Costa</h6>
                     </div>
-                    <div class="c-social-stat">
+                    <div class="c-social-stat c-social-stat--row">
                         <div class="c-icon">
                             <svg viewBox="0 0 129 129" enable-background="new 0 0 129 129">
                                 <path fill="#f15454" stroke="#f15454" stroke-width="3px" d="m121.6,40.1c-3.3-16.6-15.1-27.3-30.3-27.3-8.5,0-17.7,3.5-26.7,10.1-9.1-6.8-18.3-10.3-26.9-10.3-15.2,0-27.1,10.8-30.3,27.6-4.8,24.9 10.6,58 55.7,76 0.5,0.2 1,0.3 1.5,0.3 0.5,0 1-0.1 1.5-0.3 45-18.4 60.3-51.4 55.5-76.1zm-57,67.9c-39.6-16.4-53.3-45-49.2-66.3 2.4-12.7 11.2-21 22.3-21 7.5,0 15.9,3.6 24.3,10.5 1.5,1.2 3.6,1.2 5.1,0 8.4-6.7 16.7-10.2 24.2-10.2 11.1,0 19.8,8.1 22.3,20.7 4.1,21.1-9.5,49.6-49,66.3z"/>
@@ -117,7 +118,7 @@
             <div class="c-profile__picture"></div>
             <div class="c-profile__user">
                 <div class="c-avatar c-avatar--large">
-                    <img src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay" />
+                    <img class="c-avatar__foto" src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay" />
                 </div>
                 <h3>Gordon Ramsay</h3>
                 <p>Master Chef</p>
@@ -135,7 +136,7 @@
                     <h5>552</h5>
                     <p>Posts</p>
                 </div>
-                <button class="c-button c-button--success">Follow</button>
+                <button class="c-button c-button--success c-button--adverb">Follow</button>
             </div>
         </div>
     </div>
@@ -170,20 +171,20 @@
             <div class="c-book__picture">
                 <div class="c-book__cover">
                     <div class="c-book__genre">
-                        <p>Books</p>
+                        <span class="c-book__genre-name">Books</span>
                         &#47;
-                        <p>Literature</p>
+                        <span class="c-book__genre-name">Literature</span>
                     </div>
                     <h2 class="c-book__title">A Gentleman’s Guide</h2>
                     <div class="c-book__publish">
-                        <p class="c-book__author">
+                        <span class="c-book__author">
                             By
-                            <span class="c-book__author--name">
+                        </span>
+                        <span class="c-book__author c-book__author--name">
                                 Julian Fox
-                            </span>
-                        </p>
-                        <p class="c-book__date">May 4th 2010</p>
-                        <p class="c-book__comment">36 comments</p>
+                        </span>
+                        <span class="c-book__date">May 4th 2010</span>
+                        <span class="c-book__comment">36 comments</span>
                     </div>
                 </div>
             </div>
@@ -367,18 +368,18 @@
                 </li>
             </ul>
             <div class="c-mail__tags">
-                <p class="c-mail__tag--name">tags:</p>
+                <p class="c-mail__tag-name">tags:</p>
                 <div class="c-mail__tags-item c-mail__tags-item--success"></div>
                 <div class="c-mail__tags-item c-mail__tags-item--carefully"></div>
                 <div class="c-mail__tags-item c-mail__tags-item--danger"></div>
                 <div class="c-mail__tags-item c-mail__tags-item--info"></div>
-                <button class="c-button c-button--default">Compose</button>
+                <button class="c-button c-button--default c-button--adverb c-margin--top15">Compose</button>
             </div>
         </div>
     </div>
 
-    <div class="l-grid__item l-grid__item--area-coverSummer">
-        <div class="c-cover c-cover--summer">
+    <div class="l-grid__item l-grid__item--area-cover">
+        <div class="c-cover">
             <div class="c-cover__picture"></div>
             <div class="c-cover__body">
                 <p class="c-cover__text">
@@ -395,19 +396,19 @@
             </div>
         </div>
     </div>
-    <div class="l-grid__item l-grid__item--area-coverJacket">
-        <div class="c-cover c-cover--jacket">
-            <div class="c-cover__picture"></div>
-            <div class="c-cover__body">
-                <div class="c-cover__name">
-                    <h4 class="c-cover__title">
+    <div class="l-grid__item l-grid__item--area-jacket">
+        <div class="c-jacket">
+            <div class="c-jacket__picture"></div>
+            <div class="c-jacket__body">
+                <div class="c-jacket__name">
+                    <h4 class="c-jacket__title">
                         Jackets
                     </h4>
-                    <div class="c-cover__desc">
+                    <div class="c-jacket__desc">
                         View Products &rarr;
                     </div>
                 </div>
-                <p class="c-cover__text">
+                <p class="c-jacket__text">
                     Stunning new models from the winter collection have just arrived.
                     Be sure to check them out!
                 </p>
@@ -425,12 +426,21 @@
                     These are the features this furniture offers.
                 </p>
                 <div class="c-sale">399$</div>
+                <button class="c-button c-button--action c-button--adverb">Buy now</button>
             </div>
-            <button class="c-button c-button--action">Buy now</button>
         </div>
     </div>
     <div class="l-grid__item l-grid__item--area-catalog">
         <div class="c-catalog">
+            <div class="c-favorites">
+                <div class="c-icon c-icon--white c-favorites__icon">
+                    <svg viewBox="0 0 358.521 358.521" style="enable-background:new 0 0 358.521 358.521;" xml:space="preserve">
+                        <path d="M290.049,349.752l-110.792-80.49l-110.792,80.49l42.314-130.253L0,139.003h136.937L179.257,8.769l42.314,130.233h136.949
+                            l-110.786,80.496L290.049,349.752z M39.551,151.856l86.345,62.739L92.919,316.101l86.345-62.732l86.338,62.732l-32.976-101.505
+                            l86.351-62.739H212.24L179.257,50.364l-32.983,101.493H39.551z"/>
+                    </svg>
+                </div>
+            </div>
             <div class="c-catalog__picture"></div>
             <div class="c-catalog__body">
                 <div class="c-catalog__info">
@@ -444,14 +454,14 @@
                 <div class="c-catalog__move">
                     <div class="c-catalog__shopping">
                         <div class="c-catalog__people">
-                            <div class="c-avatar">
-                                <img src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay"/>
+                            <div class="c-avatar c-catalog__avatar">
+                                <img class="c-avatar__foto" src="../assets/images/Gordon-Ramsay.png" alt="Gordon Ramsay"/>
                             </div>
                             <div class="c-avatar">
-                                <img src="../assets/images/Lindsey-Stirling.png" alt="Lindsey Stirling"/>
+                                <img class="c-avatar__foto" src="../assets/images/Lindsey-Stirling.png" alt="Lindsey Stirling"/>
                             </div>
                             <div class="c-avatar">
-                                <img src="../assets/images/Alex-Costa.png" alt="Alex Costa"/>
+                                <img class="c-avatar__foto" src="../assets/images/Alex-Costa.png" alt="Alex Costa"/>
                             </div>
                         </div>
                         <div class="c-catalog__customers">
@@ -459,16 +469,7 @@
                             <p class="c-catalog__customers-buy">purchased this</p>
                         </div>
                     </div>
-                    <button class="c-button c-button--action">See more</button>
-                </div>
-            </div>
-            <div class="c-favorites">
-                <div class="c-icon">
-                    <svg viewBox="0 0 358.521 358.521" style="enable-background:new 0 0 358.521 358.521;" xml:space="preserve">
-                        <path d="M290.049,349.752l-110.792-80.49l-110.792,80.49l42.314-130.253L0,139.003h136.937L179.257,8.769l42.314,130.233h136.949
-                            l-110.786,80.496L290.049,349.752z M39.551,151.856l86.345,62.739L92.919,316.101l86.345-62.732l86.338,62.732l-32.976-101.505
-                            l86.351-62.739H212.24L179.257,50.364l-32.983,101.493H39.551z"/>
-                    </svg>
+                    <button class="c-button c-button--action c-button--adverb c-button--initial">See more</button>
                 </div>
             </div>
         </div>
@@ -511,7 +512,7 @@
                         </div>
                         <div class="l-table__col l-table__col--name">
                             <div class="l-table__cell">
-                                <a href="#">
+                                <a href="#" class="l-table__cell-name">
                                     Rolex Leather Strap Watch
                                 </a>
                             </div>
@@ -552,7 +553,7 @@
                         </div>
                         <div class="l-table__col l-table__col--name">
                             <div class="l-table__cell">
-                                <a href="#">
+                                <a href="#" class="l-table__cell-name">
                                     Ray Ban Aviators Sunglasses
                                 </a>
                             </div>

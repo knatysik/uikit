@@ -1,4 +1,5 @@
-.c-button {
+$block: c-button;
+.#{$block} {
   padding: 15px;
   border-radius: 5px;
   color: $white;
@@ -35,6 +36,16 @@
 
   &--small {
     padding: 5px 8px;
+  }
+
+  &--adverb {
+    width: 100%;
+  }
+
+  @include bp($sm) {
+    &--initial{
+      width: auto;
+    }
   }
 
   &:hover {

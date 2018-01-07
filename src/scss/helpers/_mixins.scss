@@ -39,6 +39,11 @@
 }
 
 @mixin triangle($size, $color, $direction) {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
   height: 0;
   width: 0;
   border-color: transparent;
@@ -74,17 +79,64 @@
   }
 }
 
-@mixin tooltip($right, $left: auto) {
+@mixin action-round($color-bg, $width: 80px, $height: $width, $right: 20px, $top: 20px) {
+  position: relative;
+
+  .c-sale {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    color: $white;
+    background-color: $color-bg;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@mixin action-favorite($depth: 40px) {
+  position: relative;
+
+  .c-favorites {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: $depth solid transparent;
+    border-right: $depth solid transparent;
+    border-top: $depth solid $action;
+    border-left: $depth solid $action;
+
+    &__icon {
+      position: absolute;
+      top: -25px;
+      left: -25px;
+    }
+  }
+}
+
+@mixin tooltip($width: 100px) {
   &:hover:after {
     content: attr(data-title);
     position: absolute;
-    right: $right;
-    left: $left;
-    top: -50px;
-    width: auto;
-    background: #000;
-    color: #fff;
-    opacity: .5;
+    background: $black;
+    color: $white;
+    width: $width;
     padding: 5px 10px;
+    left: 50%;
+    margin-left: -60px;
+    top: -34px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 10px $white;
+  }
+
+  &:hover:before {
+   @include triangle($eight-px, $black, down);
+    top: -$eight-px;
+    left: 50%;
+    margin-left: -$eight-px/2;
   }
 }

@@ -1,6 +1,132 @@
-.c-media {
+$block: c-media;
+.#{$block} {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  color: $color-text;
+
+  &__controls {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__pause, &__play {
+    background: url("../assets/images/video-play.svg") no-repeat center center;
+    width: 48px;
+    height: 40px;
+    margin-right: 10px;
+    padding: 0;
+    position: relative;
+
+    @include bp($sm) {
+      margin: 0 10px;
+    }
+
+    @include tooltip();
+  }
+
+  &__play {
+    background: url("../assets/images/video-pause.svg") no-repeat center center;
+  }
+
+  &__progress {
+    position: relative;
+    background-color: $light-gray;
+    $width-volume: 130px;
+    $width-duration: calc(100% - 80px - #{$width-volume});
+    width: $width-duration;
+    height: 2px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+
+    @include bp($sm) {
+      display: block;
+    }
+
+    &--volume {
+      width: $width-volume;
+
+      .#{$block}__progress--bar {
+        width: 100%;
+      }
+    }
+
+    &--bar {
+      position: absolute;
+      background-color: $action;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 2px;
+      z-index: 2;
+    }
+
+    &--line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      z-index: 3;
+    }
+
+    &:hover {
+      height: 5px;
+      transition-duration: .3s;
+
+      .#{$block}__progress--bar {
+        height: 5px;
+        transition-duration: .3s;
+      }
+    }
+  }
+
+  &__currentTime {
+    margin: 0 10px;
+  }
+
+  &__duration {
+    display: none;
+    margin: 0 10px;
+
+    @include bp($sm) {
+      display: block;
+    }
+  }
+
+  &__fullScreen {
+    background: url("../assets/images/video-fullScreen.svg") no-repeat center center;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    margin-left: 10px;
+    position: relative;
+
+    @include bp($sm) {
+      margin: 0 10px;
+    }
+
+    @include tooltip();
+  }
+
+  &__volume {
+    display: none;
+    background: url("../assets/images/video-volume.svg") no-repeat center center;
+    width: 20px;
+    height: 16px;
+    background-size: contain;
+    margin: 0 10px;
+    position: relative;
+
+    @include tooltip();
+
+    @include bp($sm) {
+      display: block;
+    }
+  }
 }

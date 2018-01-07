@@ -32,15 +32,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    .c-button {
-      text-transform: uppercase;
-    }
   }
 
   &__title {
     font-size: 40px;
-    font-weight: 600;
     margin-top: 0;
     @include border-bottom(60px, 26px, 4px, $color-title, $left: 50%);
     &:after {

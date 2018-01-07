@@ -5,6 +5,8 @@
   justify-content: space-between;
   height: 100%;
 
+  @include action-favorite();
+
   &__picture {
     background: url("../assets/images/catalog.png") no-repeat center center;
     background-size: cover;
@@ -32,12 +34,6 @@
 
     @include bp($xs) {
       display: flex;
-    }
-
-    .c-avatar {
-      padding: 5px;
-      flex-grow: 1;
-      align-self: center;
     }
   }
 
@@ -79,14 +75,6 @@
       @include bp($xs) {
         margin-left: 10px;
       }
-    }
-  }
-
-  .c-button {
-    width: 100%;
-
-    @include bp($sm) {
-      width: auto;
     }
   }
 }

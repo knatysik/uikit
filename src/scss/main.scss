@@ -4,6 +4,7 @@
 @import "base/typography";
 
 @import "helpers/mixins";
+@import "helpers/margin";
 
 @import "layout/grid";
 @import "layout/list";
@@ -13,15 +14,11 @@
 @import "component/button";
 @import "component/icon";
 @import "component/separator";
-@import "component/cover-name";
 @import "component/particle";
-@import "component/sale";
-@import "component/favorites";
 @import "component/group-qty";
 @import "component/group-field";
 @import "component/input-field";
 @import "component/social-stat";
-@import "component/media-controls";
 @import "component/activations";
 
 @import "component/welcome";
@@ -29,6 +26,7 @@
 @import "component/avatar";
 @import "component/book";
 @import "component/cover";
+@import "component/jacket";
 @import "component/profile";
 @import "component/media";
 @import "component/article";

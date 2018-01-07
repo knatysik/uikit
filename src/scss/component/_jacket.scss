@@ -1,29 +1,24 @@
-.c-cover {
+.c-jacket {
   display: flex;
+  flex-direction: row-reverse;
   font-family: sans-serif;
   height: 360px;
 
   &__picture {
     flex-grow: 1;
-    background: url("../assets/images/summer.png") no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 30%;
+    background: $white url("../assets/images/jacket.png") no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
 
     @include bp($md) {
-      background-position: left;
+      background-size: cover;
     }
-  }
-
-  &__text {
-    margin-bottom: 0;
-    color: $dark-gray;
   }
 
   &__body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-grow: 1;
     background: $white;
     padding: 30px;
@@ -33,12 +28,16 @@
     }
   }
 
+  &__name {
+    padding-bottom: 10px;
+  }
+
   &__title {
     font-family: 'PT Serif', serif;
     font-style: italic;
     font-weight: 100;
     font-size: 40px;
-    margin-top: 0px;
+    margin: 0 auto;
     text-transform: capitalize;
   }
 }

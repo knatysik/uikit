@@ -1,5 +1,5 @@
 $areas: welcome comment activations profile video book article chart
-mail coverSummer coverJacket page catalog checkout;
+mail cover jacket page catalog checkout;
 .l-grid {
   display: grid;
   grid-gap: 22px 22px;
@@ -14,8 +14,8 @@ mail coverSummer coverJacket page catalog checkout;
   "article article article article article article"
   "chart chart chart chart chart chart"
   "mail mail mail mail mail mail"
-  "coverSummer coverSummer coverSummer coverSummer coverSummer coverSummer"
-  "coverJacket coverJacket coverJacket coverJacket coverJacket coverJacket"
+  "cover cover cover cover cover cover"
+  "jacket jacket jacket jacket jacket jacket"
   "page page page page page page"
   "catalog catalog catalog catalog catalog catalog"
   "checkout checkout checkout checkout checkout checkout";
@@ -32,7 +32,7 @@ mail coverSummer coverJacket page catalog checkout;
       "book book book book book book"
       "article article article article article article"
       "chart chart chart chart mail mail"
-      "coverSummer coverSummer coverSummer coverJacket coverJacket coverJacket"
+      "cover cover cover jacket jacket jacket"
       "page page catalog catalog catalog catalog"
       "checkout checkout checkout checkout checkout checkout";
   }

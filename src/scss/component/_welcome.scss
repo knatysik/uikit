@@ -1,45 +1,41 @@
-.l-grid__item--area-welcome {
+.c-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../assets/images/welcome-bg.png") no-repeat left center;
+  background-size: cover;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
   height: 350px;
 
   @include bp($sm) {
     height: 500px;
   }
 
-  .c-welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    background: url("../assets/images/welcome-bg.png") no-repeat left center;
-    background-size: cover;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    background: rgba(201, 215, 255, .45);
+  }
+
+  &__title, &__text {
     position: relative;
-    padding: 15px;
-    box-sizing: border-box;
+    color: $color-title;
+    text-align: center;
+  }
 
-    &:before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      content: '';
-      background: rgba(201, 215, 255, .45);
-    }
-
-    &__title, &__text {
-      position: relative;
-      color: $color-title;
-      text-align: center;
-    }
-
-    &__form {
-      position: relative;
-      display: block;
-      max-width: 550px;
-      width: 100%;
-    }
+  &__form {
+    position: relative;
+    display: block;
+    max-width: 550px;
+    width: 100%;
   }
 }
 
