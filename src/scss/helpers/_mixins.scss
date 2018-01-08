@@ -124,19 +124,19 @@
     position: absolute;
     background: $black;
     color: $white;
+    font-size: 12px;
     width: $width;
-    padding: 5px 10px;
+    padding: 10px;
     left: 50%;
-    margin-left: -60px;
-    top: -34px;
+    top: -8px;
+    transform: translate(-50%, -100%);
     border-radius: 5px;
-    box-shadow: inset 1px 1px 10px $white;
   }
 
   &:hover:before {
    @include triangle($eight-px, $black, down);
-    top: -$eight-px;
+    top: 0;
     left: 50%;
-    margin-left: -$eight-px/2;
+    transform: translate(-50%, -50%);
   }
 }

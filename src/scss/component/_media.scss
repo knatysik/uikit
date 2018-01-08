@@ -26,6 +26,9 @@ $block: c-media;
     }
 
     @include tooltip();
+    &:hover:after {
+      left: 80%;
+    }
   }
 
   &__play {
@@ -112,6 +115,11 @@ $block: c-media;
     }
 
     @include tooltip();
+    &:hover:after {
+      transform: translate(0, -100%);
+      right: -20px;
+      left: auto;
+    }
   }
 
   &__volume {
