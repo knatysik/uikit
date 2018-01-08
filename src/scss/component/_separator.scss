@@ -28,6 +28,9 @@
     background: $dark-gray;
     margin: 0;
     display: none;
+    height: 2px;
+    border-width: 0;
+    color: $dark-gray;
 
     @include bp($xs) {
       display: block;
